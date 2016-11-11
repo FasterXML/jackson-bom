@@ -14,6 +14,14 @@
   <version>2.8.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
+  <url>https://github.com/FasterXML/jackson-bom</url>
+  <scm>
+    <connection>scm:git:git@github.com:FasterXML/jackson-bom.git</connection>
+    <developerConnection>scm:git:git@github.com:FasterXML/jackson-bom.git</developerConnection>
+    <url>http://github.com/FasterXML/jackson-bom</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <dependencyManagement>
     <dependencies>
 

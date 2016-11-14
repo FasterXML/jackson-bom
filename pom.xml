@@ -120,7 +120,7 @@
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
-        <artifactId>jackson-datatype-jdk</artifactId>
+        <artifactId>jackson-datatype-jdk8</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
@@ -221,12 +221,12 @@
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
-        <artifactId>jackson-module-osgi</artifactId>
+        <artifactId>jackson-module-mrbean</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
-        <artifactId>jackson-module-mrbean</artifactId>
+        <artifactId>jackson-module-osgi</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
@@ -251,7 +251,7 @@
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
-        <artifactId>jackson-module-scala_2.12-RC1</artifactId>
+        <artifactId>jackson-module-scala_2.12</artifactId>
         <version>${project.version}</version>
       </dependency>
 

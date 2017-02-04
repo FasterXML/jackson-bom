@@ -21,7 +21,7 @@
   </scm>
 
   <properties>
-    <jackson.version>2.7.8</jackson.version>
+    <jackson.version>2.7.9</jackson.version>
   </properties>
 
   <dependencyManagement>

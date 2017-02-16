@@ -148,6 +148,11 @@
         <artifactId>jackson-datatype-pcollections</artifactId>
         <version>${jackson.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatypes-collections</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
 
       <!-- JAX-RS -->
       <dependency>
@@ -262,6 +267,11 @@
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.12</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-modules-java8</artifactId>
         <version>${jackson.version}</version>
       </dependency>
 

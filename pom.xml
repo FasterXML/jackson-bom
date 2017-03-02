@@ -21,7 +21,7 @@
   </scm>
 
   <properties>
-    <jackson.version>2.9.0.pr1</jackson.version>
+    <jackson.version>2.9.0.pr2-SNAPSHOT</jackson.version>
 
     <jackson.version.annotations>2.9.0.pr1</jackson.version.annotations>
     <jackson.version.core>${jackson.version}</jackson.version.core>

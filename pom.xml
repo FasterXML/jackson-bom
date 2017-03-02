@@ -128,6 +128,8 @@
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jaxrs</artifactId>
+        <!-- Should this follow datatype or JAX-RS version info?
+          -->
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>
@@ -215,7 +217,7 @@
         <version>${jackson.version.jacksonjr}</version>
       </dependency>
 
-      <!-- Modules -->
+      <!-- Modules, basic -->
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-afterburner</artifactId>
@@ -261,6 +263,9 @@
         <artifactId>jackson-module-paranamer</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+
+      <!-- Language Modules -->
+
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.10</artifactId>

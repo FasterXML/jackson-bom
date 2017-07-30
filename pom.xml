@@ -21,9 +21,14 @@
   </scm>
 
   <properties>
-    <jackson.version>2.9.0-SNAPSHOT</jackson.version>
+    <jackson.version>2.9.0</jackson.version>
 
-    <jackson.version.annotations>2.9.0-SNAPSHOT</jackson.version.annotations>
+    <!-- 29-Jul-2017, tatu: With Jackson 2.x we will release full patch-level versions
+           of annotations BUT they are all identical, content-wise. Because of this
+           there is no point in updating dependency to later versions when using BOM.
+           With 3.x we will most likely drop patch level altogether.
+      -->
+    <jackson.version.annotations>2.9.0</jackson.version.annotations>
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>
     <jackson.version.dataformat>${jackson.version}</jackson.version.dataformat>

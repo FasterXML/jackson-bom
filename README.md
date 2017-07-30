@@ -10,7 +10,7 @@ There are two ways to use the pom: either as parent pom:
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>2.8.5</version>
+    <version>2.9.0</version>
   </parent>
 ```
 
@@ -22,7 +22,7 @@ or by importing just the dependencies:
         <dependency>
             <groupId>com.fasterxml.jackson</groupId>
             <artifactId>jackson-bom</artifactId>
-            <version>2.8.5</version>
+            <version>2.9.0</version>
             <scope>import</scope>
             <type>pom</type>
         </dependency>   

@@ -5,11 +5,14 @@
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-parent</artifactId>
+<!-- 08-Aug-2017, tatu: Should be fine to use prev version for now;
+    create 3.0 when we actually need something different
+-->
     <version>2.9.0</version>
   </parent>
 
   <artifactId>jackson-bom</artifactId>
-  <version>2.9.1-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <url>https://github.com/FasterXML/jackson-bom</url>
@@ -21,14 +24,12 @@
   </scm>
 
   <properties>
-    <jackson.version>2.9.0</jackson.version>
+    <jackson.version>3.0.0-SNAPSHPT</jackson.version>
 
-    <!-- 29-Jul-2017, tatu: With Jackson 2.x we will release full patch-level versions
-           of annotations BUT they are all identical, content-wise. Because of this
-           there is no point in updating dependency to later versions when using BOM.
-           With 3.x we will most likely drop patch level altogether.
+    <!-- 08-Aug-2017, tatu: With Jackson 3.x we will drop patch version from
+       annotations module, as there are no patch-level changes, ever
       -->
-    <jackson.version.annotations>2.9.0</jackson.version.annotations>
+    <jackson.version.annotations>3.0-SNAPSHOT</jackson.version.annotations>
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>
     <jackson.version.dataformat>${jackson.version}</jackson.version.dataformat>

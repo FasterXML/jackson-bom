@@ -8,7 +8,7 @@
 <!-- 08-Aug-2017, tatu: Should be fine to use prev version for now;
     create 3.0 when we actually need something different
 -->
-    <version>2.9.0</version>
+    <version>2.9.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>jackson-bom</artifactId>
@@ -24,7 +24,7 @@
   </scm>
 
   <properties>
-    <jackson.version>3.0.0-SNAPSHPT</jackson.version>
+    <jackson.version>3.0.0-SNAPSHOT</jackson.version>
 
     <!-- 08-Aug-2017, tatu: With Jackson 3.x we will drop patch version from
        annotations module, as there are no patch-level changes, ever

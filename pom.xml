@@ -5,7 +5,8 @@
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-parent</artifactId>
-    <version>2.9.0</version>
+    <!-- need newer version over 2.9.0 to compile on Java 9 -->
+    <version>2.9.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>jackson-bom</artifactId>

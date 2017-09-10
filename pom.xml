@@ -4,11 +4,11 @@
 
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
+    <!-- note: not much from jackson-parent, most are via oss-parent;
+         and mostly plug-in versions we want
+      -->
     <artifactId>jackson-parent</artifactId>
-<!-- 08-Aug-2017, tatu: Should be fine to use prev version for now;
-    create 3.0 when we actually need something different
--->
-    <version>2.9.1</version>
+    <version>3.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>jackson-bom</artifactId>

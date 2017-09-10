@@ -47,6 +47,9 @@ of Jackson: application code should only rely on `jackson-bom`
               </goals>
               <configuration>
               <rules>
+                <requireJavaVersion>
+                  <version>1.8.0</version>
+                </requireJavaVersion>
                 <requireMavenVersion>
                   <version>[3.0,)</version>
                   <message>[ERROR] The currently supported version of Maven is 3.0 or higher</message>
@@ -113,16 +116,45 @@ of Jackson: application code should only rely on `jackson-bom`
             </links>
           </configuration>
 	</plugin>
-        <!-- Set up replacer but do not invoke (it's pom, after all) -->
+
+        <!-- Set up replacer but do not invoke (it's pom, after all);
+             however, phase etc are all defined.
+          -->
 	<plugin>
           <groupId>com.google.code.maven-replacer-plugin</groupId>
           <artifactId>replacer</artifactId>
+          <version>${version.plugin.replacer}</version>
           <executions>
             <execution>
               <id>process-packageVersion</id>
+              <goals>
+                <goal>replace</goal>
+              </goals>
               <phase>generate-sources</phase>
             </execution>
           </executions>
+          <configuration>
+            <file>${packageVersion.template.input}</file>
+            <outputFile>${packageVersion.template.output}</outputFile>
+            <replacements>
+              <replacement>
+                <token>@package@</token>
+                <value>${packageVersion.package}</value>
+              </replacement>
+              <replacement>
+                <token>@projectversion@</token>
+                <value>${project.version}</value>
+              </replacement>
+              <replacement>
+                <token>@projectgroupid@</token>
+                <value>${project.groupId}</value>
+              </replacement>
+              <replacement>
+                <token>@projectartifactid@</token>
+                <value>${project.artifactId}</value>
+              </replacement>
+            </replacements>
+          </configuration>
 	</plugin>
 
 	<!-- 08-Aug-2017, tatu: Need newer version of cobertura wrt Java 8+ -->
@@ -131,23 +163,36 @@ of Jackson: application code should only rely on `jackson-bom`
           <artifactId>cobertura-maven-plugin</artifactId>
           <version>2.7</version>
 	</plugin>
+        <plugin>
+          <!-- Work around Eclipse incompatibility (http://code.google.com/p/maven-replacer-plugin/issues/de\
+tail?id=66) -->
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>com.google.code.maven-replacer-plugin</groupId>
+                    <artifactId>replacer</artifactId>
+                    <versionRange>[${version.plugin.replacer},)</versionRange>
+                    <goals>
+                      <goal>replace</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <execute>
+                      <runOnIncremental>false</runOnIncremental>
+                    </execute>
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
-
-    <!-- And one more odd thing... we actually MUST disable checks just for this
-         pom (but not on something that extends i)
-      -->
-    <plugins>
-      <plugin>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-properties</id>
-            <phase>none</phase>
-          </execution>
-        </executions>
-      </plugin>
-   </plugins>
 
   </build>
 </project>

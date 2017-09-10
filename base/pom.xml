@@ -18,6 +18,15 @@ of Jackson: application code should only rely on `jackson-bom`
         (but some core components require override)
       -->
     <jdk.module.name>${packageVersion.package}</jdk.module.name>
+
+    <!--
+     | For automatically generating PackageVersion.java. Your child pom.xml must define
+     | packageVersion.dir and packageVersion.package, and must set the phase of the
+     | process-packageVersion execution of maven-replacer-plugin to 'generate-sources'.
+    -->
+    <packageVersion.template.input>${basedir}/src/main/java/${packageVersion.dir}/PackageVersion.java.in</packageVersion.template.input>
+    <packageVersion.template.output>${generatedSourcesDir}/${packageVersion.dir}/PackageVersion.java</packageVersion.template.output>
+
   </properties>
 
   <dependencies>

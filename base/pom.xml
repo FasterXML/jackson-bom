@@ -171,8 +171,39 @@ of Jackson: application code should only rely on `jackson-bom`
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>cobertura-maven-plugin</artifactId>
           <version>2.7</version>
+          <!-- 19-Sep-2017, tatu: And ditto for Asm version it uses... -->
+          <dependencies>
+            <dependency>
+              <groupId>org.ow2.asm</groupId>
+              <artifactId>asm</artifactId>
+              <version>5.2</version>
+            </dependency>
+          </dependencies>
 	</plugin>
-        <plugin>
+
+        <!-- 19-Sep-2017, tatu: Or, if Cobertura fails with Java 8....
+          -->
+	<plugin>
+	  <groupId>org.jacoco</groupId>
+	  <artifactId>jacoco-maven-plugin</artifactId>
+	  <version>0.7.9</version>
+	  <executions>
+            <execution>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+            </execution>
+	    <execution>
+              <id>report</id>
+              <phase>prepare-package</phase>
+              <goals>
+                <goal>report</goal>
+              </goals>
+            </execution>
+	  </executions>
+	</plugin>
+
+	<plugin>
           <!-- Work around Eclipse incompatibility (http://code.google.com/p/maven-replacer-plugin/issues/de\
 tail?id=66) -->
           <groupId>org.eclipse.m2e</groupId>

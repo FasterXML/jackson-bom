@@ -27,6 +27,11 @@ of Jackson: application code should only rely on `jackson-bom`
     <packageVersion.template.input>${basedir}/src/main/java/${packageVersion.dir}/PackageVersion.java.in</packageVersion.template.input>
     <packageVersion.template.output>${generatedSourcesDir}/${packageVersion.dir}/PackageVersion.java</packageVersion.template.output>
 
+    <!-- 27-Sep-2017, tatu: Until update of parent poms (at least), need to
+           ensure newer versions of certain plugins
+      -->
+    <version.plugin.javadoc>3.0.0-M1</version.plugin.javadoc>
+
   </properties>
 
   <dependencies>

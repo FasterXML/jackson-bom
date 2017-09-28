@@ -18,6 +18,12 @@ of Jackson: application code should only rely on `jackson-bom`
         (but some core components require override)
       -->
     <jdk.module.name>${packageVersion.package}</jdk.module.name>
+
+    <!-- 27-Sep-2017, tatu: Until update of parent poms (at least), need to
+           ensure newer versions of certain plugins
+      -->
+    <version.plugin.javadoc>3.0.0-M1</version.plugin.javadoc>
+
   </properties>
 
   <dependencies>

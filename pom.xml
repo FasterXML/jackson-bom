@@ -23,6 +23,7 @@
   <properties>
     <jackson.version>2.6.7</jackson.version>
     <jackson.databind.version>2.6.7.1</jackson.databind.version>
+    <jackson.scala.version>2.6.7.1</jackson.scala.version>
   </properties>
 
   <dependencyManagement>
@@ -232,20 +233,18 @@
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.10</artifactId>
-        <version>${jackson.version}</version>
+        <version>${jackson.scala.version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.11</artifactId>
-        <version>${jackson.version}</version>
+        <version>${jackson.scala.version}</version>
       </dependency>
-<!-- only added in 2.8
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.12</artifactId>
-        <version>${jackson.version}</version>
+        <version>${jackson.scala.version}</version>
       </dependency>
--->
 
     </dependencies>
   </dependencyManagement>

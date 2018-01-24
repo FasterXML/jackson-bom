@@ -4,6 +4,11 @@ jdk:
   - openjdk7
   - openjdk8
 
+# Below this line is configuration for deploying to the Sonatype OSS repo
+# http://blog.xeiam.com/2013/05/configure-travis-ci-to-deploy-snapshots.html
+before_install: "git clone -b travis `git config --get remote.origin.url` target/travis"
+after_success: "mvn deploy --settings target/travis/settings.xml"
+
 # whitelist
 branches:
   only:

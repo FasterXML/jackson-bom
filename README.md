@@ -37,3 +37,13 @@ or by importing just the dependencies:
 Two approaches are same with respect to dependency inclusion; latter ONLY includes dependencies,
 former includes many other settings.
 Usually latter is preferable, unless component is very closely coupled with core Jackson components.
+
+## Secondary
+
+Note that this repo ALSO contains `jackson-base` (see under dir `base/`), which is the intended
+parent pom for Jackson core components. It extends `jackson-bom`, augmenting with settings that
+are only/mostly relevant for Jackson components, but not to things that depend on Jackson in general.
+Use of `jackson-base` is not recommended for libraries that are not meant to be coupled with Jackson
+release cycle and settings.
+
+

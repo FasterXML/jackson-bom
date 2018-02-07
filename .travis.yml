@@ -1,7 +1,7 @@
 language: java
 
+# Jackson 3.x is Java 8 only so
 jdk:
-  - openjdk7
   - openjdk8
 
 # Below this line is configuration for deploying to the Sonatype OSS repo

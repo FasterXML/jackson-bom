@@ -1,0 +1,12 @@
+language: java
+
+jdk:
+  - openjdk8
+  - openjdk7
+
+# Below this line is configuration for deploying to the Sonatype OSS repo
+# https://knowm.org/configure-travis-ci-to-deploy-snapshots/
+# whitelist
+branches:
+  only:
+    - "2.8-travis"

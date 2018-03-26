@@ -110,7 +110,9 @@ of Jackson: application code should only rely on `jackson-bom`
           <version>${version.plugin.javadoc}</version>
           <configuration>
 <!-- Disable Java 8 javadoc warnings -->
+<!-- 26-Mar-2018: Not for 2.9... (was left in for 2.9.5, alas)
             <additionalparam>-Xdoclint:none</additionalparam>
+-->
 <!-- ... if on Java 8 -->
 <!-- otherwise just: -->
             <failOnError>false</failOnError>

@@ -19,11 +19,6 @@ of Jackson: application code should only rely on `jackson-bom`
       -->
     <jdk.module.name>${packageVersion.package}</jdk.module.name>
 
-    <!-- 27-Sep-2017, tatu: Until update of parent poms (at least), need to
-           ensure newer versions of certain plugins
-      -->
-    <version.plugin.javadoc>3.0.0-M1</version.plugin.javadoc>
-
   </properties>
 
   <dependencies>
@@ -43,7 +38,6 @@ of Jackson: application code should only rely on `jackson-bom`
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.0.0-M1</version>
           <executions>
             <execution>
               <id>enforce-java</id>
@@ -107,7 +101,6 @@ of Jackson: application code should only rely on `jackson-bom`
 	<plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>${version.plugin.javadoc}</version>
           <configuration>
 <!-- Disable Java 8 javadoc warnings -->
 <!-- 26-Mar-2018: Not for 2.9... (was left in for 2.9.5, alas)

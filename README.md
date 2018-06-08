@@ -1,6 +1,10 @@
 # jackson-bom
 
-A "bill of materials" POM for Jackson dependencies.
+A "bill of materials" POM for Jackson dependencies, used to enforce a consistent set of versions
+across all official (maintained by FasterXML) Jackson components.
+
+NOTE: Does NOT add or include actual dependencies to all components, but rather sets VERSIONS
+to use via Maven `<dependencyManagement>` mechanism.
 
 ## Usage
 
@@ -10,9 +14,11 @@ There are two ways to use the pom: either as parent pom:
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>2.8.5</version>
+    <version>[VERSION]</version>
   </parent>
 ```
+(where `[VERSION]` is version to use like `2.9.6`)
+
 
 or by importing just the dependencies:
 
@@ -22,7 +28,7 @@ or by importing just the dependencies:
         <dependency>
             <groupId>com.fasterxml.jackson</groupId>
             <artifactId>jackson-bom</artifactId>
-            <version>2.8.5</version>
+            <version>[VERSION]</version>
             <scope>import</scope>
             <type>pom</type>
         </dependency>   

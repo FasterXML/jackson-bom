@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>jackson-bom</artifactId>
-  <version>2.9.7-SNAPSHOT</version>
+  <version>2.10.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -26,17 +26,14 @@
   </scm>
 
   <properties>
-    <jackson.version>2.9.6</jackson.version>
+    <jackson.version>2.10.0-SNAPSHOT</jackson.version>
 
     <!-- 29-Jul-2017, tatu: With Jackson 2.x we will release full patch-level versions
            of annotations BUT they are all identical, content-wise. Because of this
            there is no point in updating dependency to later versions when using BOM.
            With 3.x we will most likely drop patch level altogether.
       -->
-    <!-- 07-Sep-2017, tatu: ... although in special case of 2.9.1 that would
-       add Java 9 Automatic Module Name so need to consider
-      -->
-    <jackson.version.annotations>2.9.0</jackson.version.annotations>
+    <jackson.version.annotations>2.10.0-SNAPSHOT</jackson.version.annotations>
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>
     <jackson.version.dataformat>${jackson.version}</jackson.version.dataformat>

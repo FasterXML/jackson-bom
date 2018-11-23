@@ -17,7 +17,7 @@ There are two ways to use the pom: either as parent pom:
     <version>[VERSION]</version>
   </parent>
 ```
-(where `[VERSION]` is version to use like `2.9.6`)
+(where `[VERSION]` is version to use like `2.9.7` or `2.8.11.20180608`)
 
 
 or by importing just the dependencies:

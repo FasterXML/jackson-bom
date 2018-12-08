@@ -36,7 +36,7 @@
     <!-- 07-Sep-2017, tatu: ... although in special case of 2.9.1 that would
        add Java 9 Automatic Module Name so need to consider
       -->
-    <jackson.version.annotations>2.9.0</jackson.version.annotations>
+      <jackson.version.annotations>${jackson.version}</jackson.version.annotations>
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>
     <jackson.version.dataformat>${jackson.version}</jackson.version.dataformat>
@@ -47,6 +47,8 @@
     <jackson.version.module>${jackson.version}</jackson.version.module>
     <jackson.version.module.kotlin>${jackson.version.module}</jackson.version.module.kotlin>
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
+      <!-- JPMS Library Updates-->
+      <javax.activation.version>1.2.0</javax.activation.version>
   </properties>
 
   <dependencyManagement>

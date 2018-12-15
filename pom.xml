@@ -44,6 +44,8 @@
     <jackson.version.module>${jackson.version}</jackson.version.module>
     <jackson.version.module.kotlin>${jackson.version.module}</jackson.version.module.kotlin>
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
+    <!-- JPMS Library Updates-->
+    <javax.activation.version>1.2.0</javax.activation.version>
   </properties>
 
   <dependencyManagement>

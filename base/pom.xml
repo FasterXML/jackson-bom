@@ -171,21 +171,6 @@ of Jackson: application code should only rely on `jackson-bom`
           </configuration>
 	</plugin>
 
-	<!-- 08-Aug-2017, tatu: Need newer version of cobertura wrt Java 8+ -->
-	<plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>cobertura-maven-plugin</artifactId>
-          <version>2.7</version>
-          <!-- 19-Sep-2017, tatu: And ditto for Asm version it uses... -->
-          <dependencies>
-            <dependency>
-              <groupId>org.ow2.asm</groupId>
-              <artifactId>asm</artifactId>
-              <version>5.2</version>
-            </dependency>
-          </dependencies>
-	</plugin>
-
         <!-- 19-Sep-2017, tatu: Or, if Cobertura fails with Java 8....
           -->
 	<plugin>

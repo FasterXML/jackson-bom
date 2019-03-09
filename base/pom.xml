@@ -18,6 +18,10 @@ of Jackson: application code should only rely on `jackson-bom`
         (but some core components require override)
       -->
     <jdk.module.name>${packageVersion.package}</jdk.module.name>
+
+    <moditect.sourceGroup>${project.groupId}</moditect.sourceGroup>
+    <moditect.sourceArtifact>${project.artifactId}</moditect.sourceArtifact>
+    <moditect.sourceVersion>${project.version}</moditect.sourceVersion>
   </properties>
 
   <dependencies>
@@ -154,4 +158,45 @@ of Jackson: application code should only rely on `jackson-bom`
    </plugins>
 
   </build>
+
+  <!-- 08-Mar-2019, tatu: Add option to generate `module-info.java` with Moditect
+        under profile `moditect`
+    -->
+  <profiles>
+    <profile>
+      <id>moditect</id>
+      <properties>
+        <!-- Not only do we need JDK 9+, must target later JDK too -->
+        <java.version>1.9</java.version>
+      </properties>
+      <build>
+	<plugins>
+	  <plugin>
+	    <groupId>org.moditect</groupId>
+	    <artifactId>moditect-maven-plugin</artifactId>
+	    <executions>
+	      <execution>
+		<id>generate-module-info</id>
+		<phase>generate-sources</phase>
+		<goals>
+		  <goal>generate-module-info</goal>
+		</goals>
+		<configuration>
+		  <modules>
+		    <module>
+		      <artifact>
+			<groupId>${moditect.sourceGroup}</groupId>
+			<artifactId>${moditect.sourceArtifact}</artifactId>
+			<version>${moditect.sourceVersion}</version>
+		      </artifact>
+		    </module>
+		  </modules>
+		</configuration>
+	      </execution>
+	    </executions>
+	  </plugin>
+	</plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

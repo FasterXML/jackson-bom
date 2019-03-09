@@ -139,6 +139,27 @@ of Jackson: application code should only rely on `jackson-bom`
             </execution>
           </executions>
 	</plugin>
+
+	<plugin>
+          <groupId>org.moditect</groupId>
+          <artifactId>moditect-maven-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>add-module-infos</id>
+              <phase>package</phase>
+              <goals>
+		<goal>add-module-info</goal>
+              </goals>
+              <configuration>
+		<overwriteExistingFiles>true</overwriteExistingFiles>
+		<module>
+                  <moduleInfoFile>src/moditect/module-info.java</moduleInfoFile>
+		</module>
+              </configuration>
+            </execution>
+          </executions>
+	</plugin>
+
       </plugins>
     </pluginManagement>
 

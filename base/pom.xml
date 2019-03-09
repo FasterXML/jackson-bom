@@ -13,10 +13,8 @@ as consistent set of dependencies across components. NOTE: NOT to be used by com
 of Jackson: application code should only rely on `jackson-bom`
   </description>
   <properties>
-    <!-- by default, assume Automatic Module Name can use same package as one
-         that contains `PackageVersion` class: works for all extension modules
-        (but some core components require override)
-      -->
+
+    <!-- 08-Mar-2019, tatu: TODO: REMOVE!!! -->
     <jdk.module.name>${packageVersion.package}</jdk.module.name>
 
     <!--
@@ -27,6 +25,9 @@ of Jackson: application code should only rely on `jackson-bom`
     <packageVersion.template.input>${basedir}/src/main/java/${packageVersion.dir}/PackageVersion.java.in</packageVersion.template.input>
     <packageVersion.template.output>${generatedSourcesDir}/${packageVersion.dir}/PackageVersion.java</packageVersion.template.output>
 
+    <moditect.sourceGroup>${project.groupId}</moditect.sourceGroup>
+    <moditect.sourceArtifact>${project.artifactId}</moditect.sourceArtifact>
+    <moditect.sourceVersion>${project.version}</moditect.sourceVersion>
   </properties>
 
   <dependencies>
@@ -46,7 +47,6 @@ of Jackson: application code should only rely on `jackson-bom`
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.0.0-M1</version>
           <executions>
             <execution>
               <id>enforce-java</id>
@@ -132,7 +132,6 @@ of Jackson: application code should only rely on `jackson-bom`
 	<plugin>
           <groupId>com.google.code.maven-replacer-plugin</groupId>
           <artifactId>replacer</artifactId>
-          <version>${version.plugin.replacer}</version>
           <executions>
             <execution>
               <id>process-packageVersion</id>
@@ -220,4 +219,45 @@ tail?id=66) -->
     </pluginManagement>
 
   </build>
+
+  <!-- 08-Mar-2019, tatu: Add option to generate `module-info.java` with Moditect
+        under profile `moditect`
+    -->
+  <profiles>
+    <profile>
+      <id>moditect</id>
+      <properties>
+        <!-- Not only do we need JDK 9+, must target later JDK too -->
+        <java.version>1.9</java.version>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.moditect</groupId>
+            <artifactId>moditect-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>generate-module-info</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>generate-module-info</goal>
+                </goals>
+                <configuration>
+                  <modules>
+                    <module>
+                      <artifact>
+                        <groupId>${moditect.sourceGroup}</groupId>
+                        <artifactId>${moditect.sourceArtifact}</artifactId>
+                        <version>${moditect.sourceVersion}</version>
+                      </artifact>
+                    </module>
+                  </modules>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

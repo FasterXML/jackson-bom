@@ -249,6 +249,8 @@ tail?id=66) -->
       <properties>
         <!-- Not only do we need JDK 9+, must target later JDK too -->
         <java.version>1.9</java.version>
+        <javac.src.version>${java.version}</javac.src.version>
+        <javac.target.version>${java.version}</javac.target.version>
       </properties>
       <build>
         <plugins>

@@ -3,21 +3,45 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.fasterxml.jackson</groupId>
-    <!-- note: not much from jackson-parent, most are via oss-parent;
-         and mostly plug-in versions we want
+    <!-- 22-Mar-2019, tatu: 3.0 extends `oss-parent` directly, skips (now) obsolete
+        `jackson-parent` completely
       -->
-    <artifactId>jackson-parent</artifactId>
-    <version>3.0-SNAPSHOT</version>
+    <groupId>com.fasterxml</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>35</version>
   </parent>
 
+  <groupId>com.fasterxml.jackson</groupId>
   <artifactId>jackson-bom</artifactId>
+  <name>Jackson Bill of Materials</name>
+  <description>Build of Materials pom for getting full, complete set of compatible versions
+of Jackson components maintained by FasterXML.com
+  </description>
   <version>3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
    <module>base</module> <!-- "It's all about the base 'bout the base..." -->
   </modules>
+
+  <organization>
+    <name>FasterXML</name>
+    <url>http://fasterxml.com/</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>cowtowncoder</id>
+      <name>Tatu Saloranta</name>
+      <email>tatu@fasterxml.com</email>
+    </developer>
+  </developers>
 
   <url>https://github.com/FasterXML/jackson-bom</url>
   <scm>

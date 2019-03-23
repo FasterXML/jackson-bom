@@ -14,7 +14,7 @@ of Jackson: application code should only rely on `jackson-bom`
   </description>
   <properties>
 
-    <!-- 08-Mar-2019, tatu: TODO: REMOVE!!! -->
+    <!-- 08-Mar-2019, tatu: TODO: REMOVE!!! (once all components have JDK9 module info) -->
     <jdk.module.name>${packageVersion.package}</jdk.module.name>
 
     <!--
@@ -34,6 +34,7 @@ of Jackson: application code should only rely on `jackson-bom`
     <dependency> <!-- all components use junit for testing -->
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <version>${version.junit}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

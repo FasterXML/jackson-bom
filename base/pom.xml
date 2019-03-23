@@ -25,6 +25,17 @@ of Jackson: application code should only rely on `jackson-bom`
     <packageVersion.template.input>${basedir}/src/main/java/${packageVersion.dir}/PackageVersion.java.in</packageVersion.template.input>
     <packageVersion.template.output>${generatedSourcesDir}/${packageVersion.dir}/PackageVersion.java</packageVersion.template.output>
 
+    <!-- 09-Sep-2017, tatu: Jackson 3.x is Java 8 and above only. While it would be possible
+         to support earlier versions for some components (annotations, core streaming),
+         this is one simplification we can do
+    -->
+    <javac.src.version>1.8</javac.src.version>
+    <javac.target.version>1.8</javac.target.version>
+    <javac.debuglevel>lines,source,vars</javac.debuglevel>
+
+    <maven.compiler.source>${javac.src.version}</maven.compiler.source>
+    <maven.compiler.target>${javac.target.version}</maven.compiler.target>
+
     <moditect.sourceGroup>${project.groupId}</moditect.sourceGroup>
     <moditect.sourceArtifact>${project.artifactId}</moditect.sourceArtifact>
     <moditect.sourceVersion>${project.version}</moditect.sourceVersion>

@@ -1,0 +1,3 @@
+2.10
+
+- Remove `Automatic-Module-Name`, to avoid collision with Moditect-added `module-info`

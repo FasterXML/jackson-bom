@@ -13,12 +13,6 @@ as consistent set of dependencies across components. NOTE: NOT to be used by com
 of Jackson: application code should only rely on `jackson-bom`
   </description>
   <properties>
-    <!-- by default, assume Automatic Module Name can use same package as one
-         that contains `PackageVersion` class: works for all extension modules
-        (but some core components require override)
-      -->
-    <jdk.module.name>${packageVersion.package}</jdk.module.name>
-
     <moditect.sourceGroup>${project.groupId}</moditect.sourceGroup>
     <moditect.sourceArtifact>${project.artifactId}</moditect.sourceArtifact>
     <moditect.sourceVersion>${project.version}</moditect.sourceVersion>
@@ -99,17 +93,6 @@ of Jackson: application code should only rely on `jackson-bom`
               </configuration>
             </execution>
           </executions>
-	</plugin>
-
-        <!-- Augment settings of OSGi bundles created -->
-	<plugin>
-          <groupId>org.apache.felix</groupId>
-          <artifactId>maven-bundle-plugin</artifactId>
-          <configuration>
-            <instructions combine.children="merge">
-              <Automatic-Module-Name>${jdk.module.name}</Automatic-Module-Name>
-            </instructions>
-          </configuration>
 	</plugin>
 
 	<plugin>

@@ -8,7 +8,7 @@
       -->
     <groupId>com.fasterxml</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>35</version>
+    <version>38</version>
   </parent>
 
   <groupId>com.fasterxml.jackson</groupId>
@@ -318,6 +318,11 @@ of Jackson components maintained by FasterXML.com
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.12</artifactId>
+        <version>${jackson.version.module.scala}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-scala_2.13</artifactId>
         <version>${jackson.version.module.scala}</version>
       </dependency>
 

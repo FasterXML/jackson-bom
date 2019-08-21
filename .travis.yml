@@ -1,7 +1,6 @@
 language: java
 
 jdk:
-  - openjdk7
   - openjdk8
 
 # Below this line is configuration for deploying to the Sonatype OSS repo

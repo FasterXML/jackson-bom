@@ -264,6 +264,11 @@ of Jackson components maintained by FasterXML.com
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-blackbird</artifactId>
+        <version>${jackson.version.module}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-guice</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>

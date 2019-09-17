@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>jackson-bom</artifactId>
-  <version>2.10.0.pr3-SNAPSHOT</version>
+  <version>2.10.0.pr3</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -22,7 +22,7 @@
     <connection>scm:git:git@github.com:FasterXML/jackson-bom.git</connection>
     <developerConnection>scm:git:git@github.com:FasterXML/jackson-bom.git</developerConnection>
     <url>http://github.com/FasterXML/jackson-bom</url>
-    <tag>HEAD</tag>
+    <tag>jackson-bom-2.10.0.pr3</tag>
   </scm>
 
   <properties>

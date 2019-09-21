@@ -26,7 +26,7 @@
   </scm>
 
   <properties>
-    <jackson.version>2.9.9</jackson.version>
+    <jackson.version>2.9.10</jackson.version>
 
     <!-- 29-Jul-2017, tatu: With Jackson 2.x we will release full patch-level versions
            of annotations BUT they are all identical, content-wise. Because of this
@@ -35,10 +35,13 @@
       -->
     <!-- 07-Sep-2017, tatu: ... although in special case of 2.9.1 that would
        add Java 9 Automatic Module Name so need to consider
+
+       20-Sep-2017, tatu: due to popular demand, take it to same version, to address
+          both Module name and endless questions of "why is annotations not in sync for 2.9"
       -->
-    <jackson.version.annotations>2.9.0</jackson.version.annotations>
+    <jackson.version.annotations>2.9.10</jackson.version.annotations>
     <jackson.version.core>${jackson.version}</jackson.version.core>
-    <jackson.version.databind>2.9.9.3</jackson.version.databind>
+    <jackson.version.databind>${jackson.version}</jackson.version.databind>
     <jackson.version.dataformat>${jackson.version}</jackson.version.dataformat>
     <jackson.version.datatype>${jackson.version}</jackson.version.datatype>
     <jackson.version.jaxrs>${jackson.version}</jackson.version.jaxrs>

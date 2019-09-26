@@ -13,7 +13,7 @@ after_success: "mvn deploy --settings target/travis/settings.xml"
 branches:
   only:
     - master
-    - "2.10"
+    - "2.11"
 
 # pwd for same account as one releasing real versions via Sonatype OSS repo
 env:

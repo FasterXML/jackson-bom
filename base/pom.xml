@@ -13,6 +13,13 @@
 as consistent set of dependencies across components. NOTE: NOT to be used by components outside
 of Jackson: application code should only rely on `jackson-bom`
   </description>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <properties>
     <!--
      | For automatically generating PackageVersion.java. Your child pom.xml must define
@@ -29,6 +36,8 @@ of Jackson: application code should only rely on `jackson-bom`
     <javac.src.version>1.8</javac.src.version>
     <javac.target.version>1.8</javac.target.version>
     <javac.debuglevel>lines,source,vars</javac.debuglevel>
+
+    <version.junit>4.12</version.junit>
 
     <maven.compiler.source>${javac.src.version}</maven.compiler.source>
     <maven.compiler.target>${javac.target.version}</maven.compiler.target>
@@ -69,8 +78,8 @@ of Jackson: application code should only rely on `jackson-bom`
                   <version>1.8.0</version>
                 </requireJavaVersion>
                 <requireMavenVersion>
-                  <version>[3.0,)</version>
-                  <message>[ERROR] The currently supported version of Maven is 3.0 or higher</message>
+                  <version>[3.3,)</version>
+                  <message>[ERROR] The currently supported version of Maven is 3.3 or higher</message>
                 </requireMavenVersion>
                 <requirePluginVersions>
                   <banLatest>true</banLatest>

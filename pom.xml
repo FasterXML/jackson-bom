@@ -30,7 +30,7 @@
 
     <!-- 25-Sep-2019, tatu: With Jackson 2.x we will release full patch-level versions
            of annotations BUT they are all identical, content-wise.
-           Given this, annotations could EITHER be `2.10.0` OR `${jackson.version}`.
+           Given this, annotations could EITHER be `2.11.0` OR `${jackson.version}`.
            Based on dev feedback, with 2.10 we will do latter. It apparently is less
            confusing than alternative.
       -->

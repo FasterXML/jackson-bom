@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>jackson-bom</artifactId>
-  <version>2.9.11-SNAPSHOT</version>
+  <version>2.9.10.20191020-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>

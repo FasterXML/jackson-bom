@@ -71,26 +71,6 @@ of Jackson components maintained by FasterXML.com
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
   </properties>
 
-  <build>
-    <plugins>
-          <!-- 12-Oct-2019, tatu: Copied from
-	      https://github.com/stephenc/git-timestamp-maven-plugin/blob/master/pom.xml#L327-L337
-            -->
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.6</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>sonatype-nexus-staging</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <!-- 12-Oct-2019, tatu: Found this from output of mvn:relase -->
-          <stagingProfileId>b34f19b9cc6224</stagingProfileId>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-
   <dependencyManagement>
     <dependencies>
 

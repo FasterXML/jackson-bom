@@ -26,7 +26,7 @@
   </scm>
 
   <properties>
-    <jackson.version>2.10.3-SNAPSHOT</jackson.version>
+    <jackson.version>2.10.3</jackson.version>
 
     <!-- 25-Sep-2019, tatu: With Jackson 2.x we will release full patch-level versions
            of annotations BUT they are all identical, content-wise.

@@ -19,7 +19,7 @@ There are two ways to use the BOM pom: either as parent pom:
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>2.9.0</version>
+    <version>2.11.0</version>
   </parent>
 ```
 
@@ -31,7 +31,7 @@ or by importing just the dependencies:
         <dependency>
             <groupId>com.fasterxml.jackson</groupId>
             <artifactId>jackson-bom</artifactId>
-            <version>2.9.0</version>
+            <version>2.11.0</version>
             <scope>import</scope>
             <type>pom</type>
         </dependency>   
@@ -50,5 +50,3 @@ parent pom for Jackson core components. It extends `jackson-bom`, augmenting wit
 are only/mostly relevant for Jackson components, but not to things that depend on Jackson in general.
 Use of `jackson-base` is not recommended for libraries that are not meant to be coupled with Jackson
 release cycle and settings.
-
-

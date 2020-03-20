@@ -6,11 +6,11 @@
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-parent</artifactId>
     <!-- note: does NOT change for every version of bom -->
-    <version>2.11-SNAPSHOT</version>
+    <version>2.11</version>
   </parent>
 
   <artifactId>jackson-bom</artifactId>
-  <version>2.11.0-SNAPSHOT</version>
+  <version>2.11.0.rc1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -26,7 +26,7 @@
   </scm>
 
   <properties>
-    <jackson.version>2.11.0-SNAPSHOT</jackson.version>
+    <jackson.version>2.11.0.rc1-SNAPSHOT</jackson.version>
 
     <!-- 25-Sep-2019, tatu: With Jackson 2.x we will release full patch-level versions
            of annotations BUT they are all identical, content-wise.

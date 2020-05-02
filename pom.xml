@@ -176,6 +176,11 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-datatype-joda</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
+      <dependency> <!-- since 2.11 -->
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-joda-money</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jdk8</artifactId>

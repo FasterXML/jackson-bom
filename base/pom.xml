@@ -151,6 +151,27 @@ of Jackson: application code should only rely on `jackson-bom`
           </executions>
 	</plugin>
 
+        <plugin>
+          <groupId>de.jjohannes</groupId>
+          <artifactId>gradle-module-metadata-maven-plugin</artifactId>
+          <version>0.1.0</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>gmm</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <platformDependencies>
+              <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${project.version}</version>
+              </dependency>
+            </platformDependencies>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
 

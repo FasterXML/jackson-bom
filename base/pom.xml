@@ -240,6 +240,32 @@ tail?id=66) -->
             </lifecycleMappingMetadata>
           </configuration>
         </plugin>
+
+	<!-- 22-May-2020, tatu: As pr PR #33, we'd like to add Gradle
+	     module metadata to help version alignment
+	    -->
+        <plugin>
+          <groupId>de.jjohannes</groupId>
+          <artifactId>gradle-module-metadata-maven-plugin</artifactId>
+          <version>0.1.0</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>gmm</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <platformDependencies>
+              <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${project.version}</version>
+              </dependency>
+            </platformDependencies>
+          </configuration>
+        </plugin>
+
       </plugins>
     </pluginManagement>
 

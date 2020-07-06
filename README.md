@@ -45,3 +45,21 @@ parent pom for Jackson core components. It extends `jackson-bom`, augmenting wit
 are only/mostly relevant for Jackson components, but not to things that depend on Jackson in general.
 Use of `jackson-base` is not recommended for libraries that are not meant to be coupled with Jackson
 release cycle and settings.
+
+## Support
+
+### Community support
+
+Jackson components are supported by the Jackson community through mailing lists, Gitter forum,
+Github issues. See [Participation, Contributing](../../../jackson#participation-contributing)
+for full details.
+
+### Enterprise support
+
+Available as part of the Tidelift Subscription.
+
+The maintainers of `jackson-bom` and thousands of other packages are working with Tidelift to deliver
+commercial support and maintenance for the open source dependencies you use to build your applications.
+Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies
+you use.
+[Learn more.](https://tidelift.com/subscription/pkg/maven-com-fasterxml-jackson-jackson-bom?utm_source=maven-com-fasterxml-jackson-jackson-bom&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)

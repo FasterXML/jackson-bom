@@ -141,6 +141,11 @@ of Jackson components maintained by FasterXML.com
       <!-- Data Types -->
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-eclipse-collections</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-guava</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>

@@ -1,3 +1,7 @@
 2.10
 
 - Remove `Automatic-Module-Name`, to avoid collision with Moditect-added `module-info`
+
+2.10.5
+
+- Add missing version for `jackson-datatype-eclipse-collections`

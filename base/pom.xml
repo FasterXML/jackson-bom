@@ -7,11 +7,13 @@
     <version>2.11.2-SNAPSHOT</version>
   </parent>
   <artifactId>jackson-base</artifactId>
-  <packaging>pom</packaging>
+  <name>Jackson Base</name>
   <description>Parent pom for components of Jackson dataprocessor: includes base settings as well
-as consistent set of dependencies across components. NOTE: NOT to be used by components outside
-of Jackson: application code should only rely on `jackson-bom`
+as consistent set of dependencies across components.
+NOTE: NOT to be used by components outside of Jackson: application code should only rely on `jackson-bom`
   </description>
+  <packaging>pom</packaging>
+
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>

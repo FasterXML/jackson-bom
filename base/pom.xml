@@ -7,6 +7,7 @@
     <version>2.12.0-SNAPSHOT</version>
   </parent>
   <artifactId>jackson-base</artifactId>
+  <name>Jackson Base</name>
   <packaging>pom</packaging>
   <description>Parent pom for components of Jackson dataprocessor: includes base settings as well
 as consistent set of dependencies across components. NOTE: NOT to be used by components outside

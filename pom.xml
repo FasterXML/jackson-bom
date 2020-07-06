@@ -13,8 +13,8 @@
 
   <groupId>com.fasterxml.jackson</groupId>
   <artifactId>jackson-bom</artifactId>
-  <name>Jackson Bill of Materials</name>
-  <description>Build of Materials pom for getting full, complete set of compatible versions
+  <name>Jackson BOM</name>
+  <description>Bill of Materials pom for getting full, complete set of compatible versions
 of Jackson components maintained by FasterXML.com
   </description>
   <version>3.0.0-SNAPSHOT</version>

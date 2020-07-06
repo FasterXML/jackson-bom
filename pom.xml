@@ -10,6 +10,10 @@
   </parent>
 
   <artifactId>jackson-bom</artifactId>
+  <name>Jackson BOM</name>
+  <description>Bill of Materials pom for getting full, complete set of compatible versions
+of Jackson components maintained by FasterXML.com
+  </description>
   <version>2.12.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -17,11 +21,30 @@
    <module>base</module> <!-- "It's all about the base 'bout the base..." -->
   </modules>
 
+  <organization>
+    <name>FasterXML</name>
+    <url>http://fasterxml.com/</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>cowtowncoder</id>
+      <name>Tatu Saloranta</name>
+      <email>tatu@fasterxml.com</email>
+    </developer>
+  </developers>
+
   <url>https://github.com/FasterXML/jackson-bom</url>
   <scm>
     <connection>scm:git:git@github.com:FasterXML/jackson-bom.git</connection>
     <developerConnection>scm:git:git@github.com:FasterXML/jackson-bom.git</developerConnection>
-    <url>http://github.com/FasterXML/jackson-bom</url>
+    <url>https://github.com/FasterXML/jackson-bom</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -317,4 +340,15 @@
     </dependencies>
   </dependencyManagement>
 
+  <!-- Alas, need to include snapshot reference since otherwise can not find
+       snapshot of parent... -->
+  <repositories>
+    <repository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </repositories>
 </project>

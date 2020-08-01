@@ -1,7 +1,7 @@
 3.0 (not yet released)
 
-- Change `maven-replacer-plugin` settings to run in phase `prepare-package`
-  instead of `generate-sources`, to improve builds in IDEs
+- Add another execution of `maven-replacer-plugin` for "prepare-package" phase
+  to help with IDE import.
 
 -------------------
 

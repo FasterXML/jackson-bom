@@ -129,6 +129,13 @@ of Jackson: application code should only rely on `jackson-bom`
               <id>process-packageVersion</id>
               <phase>generate-sources</phase>
             </execution>
+	    <!-- 31-Jul-2020, tatu: as per databind#2808 apparently also (?)
+                needs this to work better with IDEs
+              -->
+            <execution>
+              <id>prepare-with-packageVersion</id>
+              <phase>prepare-package</phase>
+            </execution>
           </executions>
 	</plugin>
 

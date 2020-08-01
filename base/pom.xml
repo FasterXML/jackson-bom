@@ -126,8 +126,17 @@ of Jackson: application code should only rely on `jackson-bom`
           <artifactId>replacer</artifactId>
           <executions>
             <execution>
+	  <!-- 31-Jul-2020, tatu: As databind#2808, change to be more IDE(A)-friendly
+          -->
+	  <!-- before 2.12 had:
               <id>process-packageVersion</id>
               <phase>generate-sources</phase>
+            -->
+              <id>generate-package-version-java</id>
+              <phase>prepare-package</phase>
+              <goals>
+                <goal>replace</goal>
+              </goals>
             </execution>
           </executions>
 	</plugin>

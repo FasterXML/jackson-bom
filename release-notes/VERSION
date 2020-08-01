@@ -1,6 +1,7 @@
 2.12.0
 
-No changes since 2.11
+- Change `maven-replacer-plugin` settings to run in phase `prepare-package`
+  instead of `generate-sources`, to improve builds in IDEs
 
 2.11.2
 

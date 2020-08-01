@@ -1,6 +1,7 @@
-2.11.3
+2.11.2
 
 - Add missing version for `jackson-datatype-eclipse-collections`
+- Add override for `version.plugin.bundle` (for 5.1.1) to help build on JDK 15+
 
 2.11 (26-Apr-2020)
 

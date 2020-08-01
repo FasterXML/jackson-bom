@@ -70,6 +70,12 @@ of Jackson components maintained by FasterXML.com
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
     <!-- JPMS Library Updates-->
     <javax.activation.version>1.2.0</javax.activation.version>
+
+    <!-- 31-Jul-2020, tatu: will go in `oss-parent` for 2.12, but for 2.11 need to bump
+            bundle-plugin version to make work in JDK 15+
+          (see https://github.com/FasterXML/jackson-databind/issues/2806)
+      -->
+    <version.plugin.bundle>5.1.1</version.plugin.bundle>
   </properties>
 
   <dependencyManagement>

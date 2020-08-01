@@ -12,8 +12,7 @@ after_success: "mvn deploy --settings target/travis/settings.xml"
 # whitelist
 branches:
   only:
-    - master
-    - "2.11"
+    - "2.12"
 
 # pwd for same account as one releasing real versions via Sonatype OSS repo
 env:

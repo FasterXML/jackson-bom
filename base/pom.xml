@@ -37,7 +37,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
     <javac.target.version>1.8</javac.target.version>
     <javac.debuglevel>lines,source,vars</javac.debuglevel>
 
-    <version.junit>4.12</version.junit>
+    <version.junit>4.13.1</version.junit>
 
     <maven.compiler.source>${javac.src.version}</maven.compiler.source>
     <maven.compiler.target>${javac.target.version}</maven.compiler.target>

@@ -253,6 +253,11 @@ of Jackson components maintained by FasterXML.com
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.jr</groupId>
+        <artifactId>jackson-jr-annotation-support</artifactId>
+        <version>${jackson.version.jacksonjr}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.jr</groupId>
         <artifactId>jackson-jr-objects</artifactId>
         <version>${jackson.version.jacksonjr}</version>
       </dependency>

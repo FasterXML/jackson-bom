@@ -3,6 +3,10 @@
 - Add another execution of `maven-replacer-plugin` for "prepare-package" phase
   to help with IDE import.
 
+2.11.3
+
+No changes since 2.11.2
+
 2.11.2
 
 - Add missing version for `jackson-datatype-eclipse-collections`

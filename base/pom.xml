@@ -35,19 +35,19 @@ of Jackson: application code should only rely on `jackson-bom`
     </dependency>
   </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <!-- JPMS Libraries-->
-            <dependency>
-                <groupId>javax.activation</groupId>
-                <artifactId>javax.activation-api</artifactId>
-                <version>${javax.activation.version}</version>
-            </dependency>
-        </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <!-- JPMS Libraries-->
+      <dependency>
+        <groupId>javax.activation</groupId>
+        <artifactId>javax.activation-api</artifactId>
+        <version>${javax.activation.version}</version>
+      </dependency>
+    </dependencies>
 
-    </dependencyManagement>
+  </dependencyManagement>
 
-    <build>
+  <build>
     <pluginManagement>
       <plugins>
         <!-- Verify existence of certain settings
@@ -178,13 +178,39 @@ of Jackson: application code should only rely on `jackson-bom`
             </platformDependencies>
           </configuration>
         </plugin>
-      </plugins>
-    </pluginManagement>
 
-    <!-- And one more odd thing... we actually MUST disable checks just for this
+      <!-- 03-Nov-2020, tatu: For 2.12, defaults for better LICENSE inclusion -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>add-resource</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>add-resource</goal>
+            </goals>
+            <configuration>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}</directory>
+                  <targetPath>META-INF</targetPath>
+                  <includes>
+                    <include>LICENSE</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </pluginManagement>
+
+  <!-- And one more odd thing... we actually MUST disable checks just for this
          pom (but not on something that extends i)
       -->
-    <plugins>
+   <plugins>
       <plugin>
         <artifactId>maven-enforcer-plugin</artifactId>
         <executions>

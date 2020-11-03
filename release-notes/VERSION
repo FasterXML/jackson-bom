@@ -2,5 +2,7 @@
 
 - Add another execution of `maven-replacer-plugin` for "prepare-package" phase
   to help with IDE import.
+- Add default settings for `gradle-module-metadata-maven-plugin` (gradle metadata)
+- Add default settings for `build-helper-maven-plugin` (LICENSE inclusion)
 
 Entries for 2.x found from `release-notes/VERSION-2.x`

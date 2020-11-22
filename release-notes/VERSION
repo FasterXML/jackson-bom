@@ -4,5 +4,6 @@
   to help with IDE import.
 - Add default settings for `gradle-module-metadata-maven-plugin` (gradle metadata)
 - Add default settings for `build-helper-maven-plugin` (LICENSE inclusion)
+- Drop `jackson-module-scala_2.10` entry (not released for Jackson 2.12 or later)
 
 Entries for 2.x found from `release-notes/VERSION-2.x`

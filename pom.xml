@@ -325,11 +325,13 @@ of Jackson components maintained by FasterXML.com
 
       <!-- Language Modules -->
 
-      <dependency>
+      <!-- 21-Nov-2020, tatu: Scala 2.10 support dropped in Jackson 2.12 -->
+      <!-- dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.10</artifactId>
         <version>${jackson.version.module.scala}</version>
-      </dependency>
+      </dependency -->
+
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.11</artifactId>

@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>jackson-bom</artifactId>
-  <version>2.10.6-SNAPSHOT</version>
+  <version>2.10.5.20201202-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -26,7 +26,7 @@
   </scm>
 
   <properties>
-    <jackson.version>2.10.6-SNAPSHOT</jackson.version>
+    <jackson.version>2.10.5</jackson.version>
 
     <!-- 25-Sep-2019, tatu: With Jackson 2.x we will release full patch-level versions
            of annotations BUT they are all identical, content-wise.
@@ -36,7 +36,7 @@
       -->
     <jackson.version.annotations>${jackson.version}</jackson.version.annotations>
     <jackson.version.core>${jackson.version}</jackson.version.core>
-    <jackson.version.databind>${jackson.version}</jackson.version.databind>
+    <jackson.version.databind>2.10.5.1</jackson.version.databind>
     <jackson.version.dataformat>${jackson.version}</jackson.version.dataformat>
     <jackson.version.datatype>${jackson.version}</jackson.version.datatype>
     <jackson.version.jaxrs>${jackson.version}</jackson.version.jaxrs>

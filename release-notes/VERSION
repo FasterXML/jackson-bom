@@ -1,5 +1,16 @@
-3.0 (not yet released)
+Project: jackson-bom / jackson-base
+
+Contains "Bill-of-Materials" for all Jackson components for main component
+("jackson-bom"), as well as parent pom ("jackson-base") for Jackson components
+themselves. Only former should be extended by anything other than official
+Jackson components (core, modules)
+
+NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
+
+------------------------------------------------------------------------
+=== Releases (note: only includes patches with actual changes)
+------------------------------------------------------------------------
+
+3.0.0 (not yet released)
 
 - No changes since 2.x
-
-Entries for 2.x found from `release-notes/VERSION-2.x`

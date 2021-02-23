@@ -11,7 +11,7 @@ Jackson components (core, modules)
 
 2.13.0 (not yet released)
 
-No changes since 2.12
+#39: Configure moditect plugin with `<jvmVersion>11</jvmVersion>`
 
 2.12.0 (29-Nov-2020)
 

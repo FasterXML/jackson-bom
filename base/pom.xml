@@ -200,7 +200,6 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
 	<plugin>
 	  <groupId>org.jacoco</groupId>
 	  <artifactId>jacoco-maven-plugin</artifactId>
-	  <version>0.8.6</version>
 	  <executions>
             <execution>
               <goals>

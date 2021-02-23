@@ -186,6 +186,13 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
               </configuration>
             </execution>
           </executions>
+          <!-- 22-Feb-2021, tatu: For Jackson 2.13+, put `module-info.class` 
+              under "META-INF/versions/11" (instead of root, /); helps pre-Java9
+              libraries, frameworks, as well as avoids warnings by tooling
+            -->
+          <configuration>
+            <jvmVersion>11</jvmVersion>
+          </configuration>
         </plugin>
 
         <!-- 19-Sep-2017, tatu: Or, if Cobertura fails with Java 8....
@@ -193,7 +200,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
 	<plugin>
 	  <groupId>org.jacoco</groupId>
 	  <artifactId>jacoco-maven-plugin</artifactId>
-	  <version>0.7.9</version>
+	  <version>0.8.6</version>
 	  <executions>
             <execution>
               <goals>

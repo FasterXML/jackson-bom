@@ -13,6 +13,15 @@ Jackson components (core, modules)
 
 #39: Configure moditect plugin with `<jvmVersion>11</jvmVersion>`
 
+2.12.2 (not yet released)
+
+#40: Jakarta 9 artifact versions are missing from jackson-bom
+ (reported by Christopher T (ctubbsii@github))
+
+2.12.1 (08-Jan-2021)
+
+No changes since 2.12.0
+
 2.12.0 (29-Nov-2020)
 
 - Add another execution of `maven-replacer-plugin` for "prepare-package" phase

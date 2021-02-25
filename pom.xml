@@ -336,6 +336,12 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-module-jaxb-annotations</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+      <dependency> <!-- 24-Feb-2021, tatu: see [bom#40] -->
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-jaxb-annotations</artifactId>
+        <version>${jackson.version.module}</version>
+        <classifier>jakarta</classifier>
+      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-jsonSchema</artifactId>

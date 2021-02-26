@@ -12,6 +12,8 @@ Jackson components (core, modules)
 2.13.0 (not yet released)
 
 #39: Configure moditect plugin with `<jvmVersion>11</jvmVersion>`
+- [datatype-hibernate#39]: Drop `jackson-datatype-hibernate3` (support for
+  Hibernate 3.x datatypes)
 
 2.12.2 (not yet released)
 

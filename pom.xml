@@ -150,11 +150,16 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-datatype-guava</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
+
+      <!-- 25-Feb-2021, tatu: as per [datatype-hibernate#139], h3 dropped from 2.13 -->
+      <!--
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate3</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
+      -->
+
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate4</artifactId>

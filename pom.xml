@@ -208,6 +208,13 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-datatype-jsr353</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
+      <!-- 24-Feb-2021, tatu: as per [bom#40] need to include "jakarta" variants too  -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jsr353</artifactId>
+        <version>${jackson.version.datatype}</version>
+        <classifier>jakarta</classifier>
+      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-pcollections</artifactId>

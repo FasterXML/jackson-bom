@@ -15,7 +15,7 @@ Jackson components (core, modules)
 - [datatype-hibernate#39]: Drop `jackson-datatype-hibernate3` (support for
   Hibernate 3.x datatypes)
 
-2.12.2 (not yet released)
+2.12.2 (03-Mar-2021)
 
 #40: Jakarta 9 artifact versions are missing from jackson-bom
  (reported by Christopher T (ctubbsii@github))

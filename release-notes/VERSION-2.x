@@ -18,6 +18,7 @@ Jackson components (core, modules)
 2.12.3 (not yet released)
 
 - Add version for `jackson-datatype-jakarta-jsonp` module (introduced after 2.12.2)
+- Add (beta) version for `jackson-dataformat-toml)
 
 2.12.2 (03-Mar-2021)
 

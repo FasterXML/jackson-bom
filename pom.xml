@@ -127,6 +127,11 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-dataformat-smile</artifactId>
         <version>${jackson.version.dataformat}</version>
       </dependency>
+      <dependency> <!-- Officially added in 2.13.0, beta in 2.12.3 -->
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-toml</artifactId>
+        <version>${jackson.version.dataformat}</version>
+      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.dataformat</groupId>
         <artifactId>jackson-dataformat-xml</artifactId>

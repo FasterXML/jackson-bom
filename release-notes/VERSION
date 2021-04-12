@@ -1,4 +1,4 @@
-2.12.3 (not yet released)
+2.12.3 (12-Apr-2021)
 
 - Add version for `jackson-datatype-jakarta-jsonp` module (introduced after 2.12.2)
 - Add (beta) version for `jackson-dataformat-toml)

@@ -21,7 +21,7 @@ of Jackson components maintained by FasterXML.com
   <packaging>pom</packaging>
 
   <modules>
-   <module>base</module> <!-- "It's all about the base 'bout the base..." -->
+   <module>base</module> <!-- "It's all about that base 'bout that base..." -->
   </modules>
 
   <organization>

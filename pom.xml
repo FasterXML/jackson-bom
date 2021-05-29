@@ -64,6 +64,7 @@ of Jackson components maintained by FasterXML.com
     <jackson.version.dataformat>${jackson.version}</jackson.version.dataformat>
     <jackson.version.datatype>${jackson.version}</jackson.version.datatype>
     <jackson.version.jaxrs>${jackson.version}</jackson.version.jaxrs>
+    <jackson.version.jakarta.rs>${jackson.version}</jackson.version.jakarta.rs>
     <jackson.version.jacksonjr>${jackson.version}</jackson.version.jacksonjr>
 
     <jackson.version.module>${jackson.version}</jackson.version.module>
@@ -182,12 +183,6 @@ of Jackson components maintained by FasterXML.com
           -->
         <version>${jackson.version.datatype}</version>
       </dependency>
-      <dependency> <!-- 24-Feb-2021, tatu: see [bom#40] -->
-        <groupId>com.fasterxml.jackson.datatype</groupId>
-        <artifactId>jackson-datatype-jaxrs</artifactId>
-        <version>${jackson.version.datatype}</version>
-        <classifier>jakarta</classifier>
-      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-joda</artifactId>
@@ -230,23 +225,10 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-jaxrs-base</artifactId>
         <version>${jackson.version.jaxrs}</version>
       </dependency>
-      <!-- 24-Feb-2021, tatu: as per [bom#40] need to include "jakarta" variants too  -->
-      <dependency>
-        <groupId>com.fasterxml.jackson.jaxrs</groupId>
-        <artifactId>jackson-jaxrs-base</artifactId>
-        <version>${jackson.version.jaxrs}</version>
-        <classifier>jakarta</classifier>
-      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.jaxrs</groupId>
         <artifactId>jackson-jaxrs-cbor-provider</artifactId>
         <version>${jackson.version.jaxrs}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.jaxrs</groupId>
-        <artifactId>jackson-jaxrs-cbor-provider</artifactId>
-        <version>${jackson.version.jaxrs}</version>
-        <classifier>jakarta</classifier>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.jaxrs</groupId>
@@ -255,20 +237,8 @@ of Jackson components maintained by FasterXML.com
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.jaxrs</groupId>
-        <artifactId>jackson-jaxrs-json-provider</artifactId>
-        <version>${jackson.version.jaxrs}</version>
-        <classifier>jakarta</classifier>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.jaxrs</groupId>
         <artifactId>jackson-jaxrs-smile-provider</artifactId>
         <version>${jackson.version.jaxrs}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.jaxrs</groupId>
-        <artifactId>jackson-jaxrs-smile-provider</artifactId>
-        <version>${jackson.version.jaxrs}</version>
-        <classifier>jakarta</classifier>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.jaxrs</groupId>
@@ -277,20 +247,40 @@ of Jackson components maintained by FasterXML.com
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.jaxrs</groupId>
-        <artifactId>jackson-jaxrs-xml-provider</artifactId>
-        <version>${jackson.version.jaxrs}</version>
-        <classifier>jakarta</classifier>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.jaxrs</groupId>
         <artifactId>jackson-jaxrs-yaml-provider</artifactId>
         <version>${jackson.version.jaxrs}</version>
       </dependency>
+
+      <!-- Jakarta-RS (2.13+) -->
       <dependency>
-        <groupId>com.fasterxml.jackson.jaxrs</groupId>
-        <artifactId>jackson-jaxrs-yaml-provider</artifactId>
-        <version>${jackson.version.jaxrs}</version>
-        <classifier>jakarta</classifier>
+        <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+        <artifactId>jackson-jakarta-rs-base</artifactId>
+        <version>${jackson.version.jakarta.rs}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+        <artifactId>jackson-jakarta-rs-cbor-provider</artifactId>
+        <version>${jackson.version.jakarta.rs}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+        <artifactId>jackson-jakarta-rs-json-provider</artifactId>
+        <version>${jackson.version.jakarta.rs}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+        <artifactId>jackson-jakarta-rs-smile-provider</artifactId>
+        <version>${jackson.version.jakarta.rs}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+        <artifactId>jackson-jakarta-rs-xml-provider</artifactId>
+        <version>${jackson.version.jakarta.rs}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+        <artifactId>jackson-jakarta-rs-yaml-provider</artifactId>
+        <version>${jackson.version.jakarta.rs}</version>
       </dependency>
 
       <!-- Jackson Jr. -->
@@ -341,11 +331,10 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-module-jaxb-annotations</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
-      <dependency> <!-- 24-Feb-2021, tatu: see [bom#40] -->
+      <dependency> <!-- 2.13+: Jakarta-bind too [modules-base#130] -->
         <groupId>com.fasterxml.jackson.module</groupId>
-        <artifactId>jackson-module-jaxb-annotations</artifactId>
+        <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
         <version>${jackson.version.module}</version>
-        <classifier>jakarta</classifier>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>

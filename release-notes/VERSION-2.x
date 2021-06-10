@@ -14,6 +14,10 @@ Jackson components (core, modules)
 #39: Configure moditect plugin with `<jvmVersion>11</jvmVersion>`
 - [datatype-hibernate#39]: Drop `jackson-datatype-hibernate3` (support for
   Hibernate 3.x datatypes)
+- [jackson-jarx-providers#146] due to addition of new Jakarta artifacts -
+  (Jakarta-JSONP, Jakarta-xmlbind-annotations, Jakarta-rs-providers) -
+  removed "jakarta" classifier variants of JAXB/JSON-P/JAX-RS modules
+  (effectively undo's #40 from 2.12.0)
 
 2.12.3 (not yet released)
 

@@ -351,6 +351,11 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-module-mrbean</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+      <dependency> <!-- Added in 2.13.0 -->
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-no-ctor-deser</artifactId>
+        <version>${jackson.version.module}</version>
+      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-osgi</artifactId>

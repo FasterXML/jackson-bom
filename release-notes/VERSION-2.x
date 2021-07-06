@@ -19,7 +19,11 @@ Jackson components (core, modules)
   removed "jakarta" classifier variants of JAXB/JSON-P/JAX-RS modules
   (effectively undo's #40 from 2.12.0)
 
-2.12.3 (not yet released)
+2.12.4 (06-Jul-2021)
+
+No changes since 2.12.3
+
+2.12.3 (12-Apr-2021)
 
 - Add version for `jackson-datatype-jakarta-jsonp` module (introduced after 2.12.2)
 - Add (beta) version for `jackson-dataformat-toml)

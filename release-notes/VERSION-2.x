@@ -19,6 +19,7 @@ Jackson components (core, modules)
   removed "jakarta" classifier variants of JAXB/JSON-P/JAX-RS modules
   (effectively undo's #40 from 2.12.0)
 
+2.12.5 (27-Aug-2021)
 2.12.4 (06-Jul-2021)
 
 No changes since 2.12.3

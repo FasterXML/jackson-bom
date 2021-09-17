@@ -31,6 +31,7 @@ of Jackson: application code should only rely on `jackson-bom`
     <dependency> <!-- all components use junit for testing -->
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <version>${version.junit}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

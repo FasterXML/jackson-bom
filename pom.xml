@@ -6,7 +6,7 @@
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-parent</artifactId>
     <!-- note: does NOT change for every version of bom -->
-    <version>2.13-SNAPSHOT</version>
+    <version>2.13</version>
   </parent>
 
   <artifactId>jackson-bom</artifactId>
@@ -49,7 +49,7 @@ of Jackson components maintained by FasterXML.com
   </scm>
 
   <properties>
-    <jackson.version>2.13.0-SNAPSHOT</jackson.version>
+    <jackson.version>2.13.0</jackson.version>
 
     <!-- 25-Sep-2019, tatu: With Jackson 2.x we will release full patch-level versions
            of annotations BUT they are all identical, content-wise.
@@ -174,6 +174,11 @@ of Jackson components maintained by FasterXML.com
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate5</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency> <!-- Added in 2.13 -->
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-hibernate5-jakarta</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>

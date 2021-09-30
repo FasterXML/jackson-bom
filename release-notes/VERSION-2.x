@@ -9,9 +9,11 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.13.0 (not yet released)
+2.13.0 (30-Sep-2021)
 
 #39: Configure moditect plugin with `<jvmVersion>11</jvmVersion>`
+#43: jackson-bom manages the version of `junit:junit`
+ (reported by Andy W, wilkinsona@github)
 - [datatype-hibernate#39]: Drop `jackson-datatype-hibernate3` (support for
   Hibernate 3.x datatypes)
 - [jackson-jarx-providers#146] due to addition of new Jakarta artifacts -

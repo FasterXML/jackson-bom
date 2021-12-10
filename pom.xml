@@ -405,6 +405,11 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-module-scala_2.13</artifactId>
         <version>${jackson.version.module.scala}</version>
       </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-scala_3</artifactId>
+        <version>${jackson.version.module.scala}</version>
+      </dependency>
 
     </dependencies>
   </dependencyManagement>

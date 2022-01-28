@@ -160,7 +160,7 @@ of Jackson: application code should only rely on `jackson-bom`
               under "META-INF/versions/11" (instead of root, /); helps pre-Java9
               libraries, frameworks, as well as avoids warnings by tooling
             -->
-	  <!-- 27-Jan-2022, tatu: as per [databind#3380] etc, really need to use
+          <!-- 27-Jan-2022, tatu: as per [databind#3380] etc, really need to use
                "META-INF/versions/9" for tooling compatibility
             -->
           <configuration>

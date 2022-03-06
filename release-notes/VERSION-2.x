@@ -13,7 +13,7 @@ Jackson components (core, modules)
 
 No changes since 2.13
 
-2.13.2 (not yet released)
+2.13.2 (06-Mar-2022)
 
 #46: `module-info.java` is in `META-INF/versions/11` instead of `META-INF/versions/9`
 

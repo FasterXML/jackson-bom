@@ -3,7 +3,7 @@
 A "bill of materials" POM for Jackson dependencies.
 
 Since Jackson 2.9.2 also contains `jackson-base` internal parent for actual Jackson
-components: this should not be relied by components other than standard Jackson
+components: this should not be relied on by components other than standard Jackson
 component maintained by development team. It is bundled here for convenience.
 
 ## Status
@@ -19,7 +19,7 @@ There are two ways to use the BOM pom: either as parent pom:
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>2.13.1</version>
+    <version>2.13.2</version>
   </parent>
 ```
 
@@ -31,7 +31,7 @@ or by importing just the dependencies:
         <dependency>
             <groupId>com.fasterxml.jackson</groupId>
             <artifactId>jackson-bom</artifactId>
-            <version>2.13.1</version>
+            <version>2.13.2</version>
             <scope>import</scope>
             <type>pom</type>
         </dependency>   
@@ -56,7 +56,7 @@ release cycle and settings.
 ### Community support
 
 Jackson components are supported by the Jackson community through mailing lists, Gitter forum,
-Github issues. See [Participation, Contributing](../../../jackson#participation-contributing)
+GitHub issues. See [Participation, Contributing](../../../jackson#participation-contributing)
 for full details.
 
 ### Enterprise support

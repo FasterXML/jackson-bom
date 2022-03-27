@@ -43,6 +43,11 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
     <moditect.sourceGroup>${project.groupId}</moditect.sourceGroup>
     <moditect.sourceArtifact>${project.artifactId}</moditect.sourceArtifact>
     <moditect.sourceVersion>${project.version}</moditect.sourceVersion>
+
+    <!-- To fix [jackson-bom#52] need to first use better default version for
+         parent pom, and then also allow override as need be
+      -->
+    <jackson-bom.version>${project.parent.version}</jackson-bom.version>
   </properties>
 
   <dependencies>
@@ -267,7 +272,7 @@ tail?id=66) -->
               <dependency>
                 <groupId>com.fasterxml.jackson</groupId>
                 <artifactId>jackson-bom</artifactId>
-                <version>${project.version}</version>
+                <version>${jackson-bom.version}</version>
               </dependency>
             </platformDependencies>
           </configuration>

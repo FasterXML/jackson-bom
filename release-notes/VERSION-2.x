@@ -13,6 +13,10 @@ Jackson components (core, modules)
 
 #52: Gradle reports incorrect jackson-bom dependency version
 
+2.13.3 (14-May-2022)
+
+No changes since 2.13.2
+
 2.13.2 (06-Mar-2022)
 
 #46: `module-info.java` is in `META-INF/versions/11` instead of `META-INF/versions/9`

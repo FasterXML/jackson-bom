@@ -10,6 +10,11 @@ But the basic idea is that instead of specifying version explicitly for every Ja
 component, as part of dependency definition, one can use a BOM to get a full, complete
 set of consistent versions to use.
 
+## Status
+
+[![Build Status](https://travis-ci.org/FasterXML/jackson-bom.svg)](https://travis-ci.org/FasterXML/jackson-bom)
+[![Tidelift](https://tidelift.com/badges/package/maven/com.fasterxml.jackson:jackson-bom)](https://tidelift.com/subscription/pkg/maven-com-fasterxml-jackson-jackson-bom?utm_source=maven-com-fasterxml-jackson-jackson-bom&utm_medium=referral&utm_campaign=readme)
+
 ## Usage
 
 There are two ways to use the BOM pom: either as parent pom:

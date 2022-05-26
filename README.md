@@ -58,6 +58,8 @@ Deprecation markers are added for internal methods and types where necessary so 
 
 It is understood that the distinction between "Public" and "Internal" APIs is not always easy to distinguish; Javadocs are used in places to try to make distinction clear.
 
+Having said all that, for most users and most usage Semantic Versioning is maintained.
+
 ### "Normal" minor version releases
 
 Most of the time all Jackson components are released using 3-digit version, like `2.13.3`.

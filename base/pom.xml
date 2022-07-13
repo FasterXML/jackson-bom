@@ -309,15 +309,16 @@ tail?id=66) -->
     <plugins>
       <!-- 12-Oct-2019, tatu: Copied from
             https://github.com/stephenc/git-timestamp-maven-plugin/blob/master/pom.xml#L327-L337
-         -->
+        -->
+      <!-- 13-Jul-2022, tatu: Updated to the "new" Sonatype OSS repo -->
       <plugin>
          <groupId>org.sonatype.plugins</groupId>
          <artifactId>nexus-staging-maven-plugin</artifactId>
-         <version>1.6.6</version>
+         <version>1.6.13</version>
          <extensions>true</extensions>
          <configuration>
            <serverId>sonatype-nexus-staging</serverId>
-           <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+           <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
            <stagingProfileId>b34f19b9cc6224</stagingProfileId>
          </configuration>
        </plugin>

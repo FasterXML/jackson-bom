@@ -72,6 +72,24 @@ of Jackson 3.x components maintained by FasterXML.com
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
   </properties>
 
+  <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo.
+       NOTE: unfortunately we DO need this here to publish bom itself.
+       Hopefully that does not leak to downstream projects
+    -->
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
   <dependencyManagement>
     <dependencies>
 

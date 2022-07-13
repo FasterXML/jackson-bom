@@ -8,14 +8,14 @@
       -->
     <groupId>com.fasterxml</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>43</version>
+    <version>45</version>
   </parent>
 
-  <groupId>com.fasterxml.jackson</groupId>
+  <groupId>tools.jackson</groupId>
   <artifactId>jackson-bom</artifactId>
   <name>Jackson BOM</name>
   <description>Bill of Materials pom for getting full, complete set of compatible versions
-of Jackson components maintained by FasterXML.com
+of Jackson 3.x components maintained by FasterXML.com
   </description>
   <version>3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -76,13 +76,21 @@ of Jackson components maintained by FasterXML.com
     <dependencies>
 
       <!-- Core -->
+
+      <!-- 13-Jul-2022, tatu: NOTE! There is one notable exception to renaming
+	   of packages between Jackson 2.x and 3.0: annotations will remain
+	   in the "old" `com.fasterxml.jackson.core` group and NOT move to
+	   `tools.jackson.core`. This is due to specific nature of annotations
+	   as API: we want 2.x/3.x to be essentially compatible as if that was
+	   just a Minor version upgrade, not Major.
+	-->
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-annotations</artifactId>
         <version>${jackson.version.annotations}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
+        <groupId>tools.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
         <version>${jackson.version.core}</version>
       </dependency>

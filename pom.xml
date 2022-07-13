@@ -311,27 +311,27 @@ of Jackson 3.x components maintained by FasterXML.com
 
       <!-- Jackson Jr. -->
       <dependency>
-        <groupId>com.fasterxml.jackson.jr</groupId>
+        <groupId>tools.jackson.jr</groupId>
         <artifactId>jackson-jr-all</artifactId>
         <version>${jackson.version.jacksonjr}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.jr</groupId>
+        <groupId>tools.jackson.jr</groupId>
         <artifactId>jackson-jr-annotation-support</artifactId>
         <version>${jackson.version.jacksonjr}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.jr</groupId>
+        <groupId>tools.jackson.jr</groupId>
         <artifactId>jackson-jr-objects</artifactId>
         <version>${jackson.version.jacksonjr}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.jr</groupId>
+        <groupId>tools.jackson.jr</groupId>
         <artifactId>jackson-jr-retrofit2</artifactId>
         <version>${jackson.version.jacksonjr}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.jr</groupId>
+        <groupId>tools.jackson.jr</groupId>
         <artifactId>jackson-jr-stree</artifactId>
         <version>${jackson.version.jacksonjr}</version>
       </dependency>

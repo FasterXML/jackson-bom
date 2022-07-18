@@ -160,7 +160,7 @@ of Jackson 3.x components maintained by FasterXML.com
         <version>${jackson.version.dataformat}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <groupId>tools.jackson.dataformat</groupId>
         <artifactId>jackson-dataformat-xml</artifactId>
         <version>${jackson.version.dataformat}</version>
       </dependency>
@@ -338,27 +338,27 @@ of Jackson 3.x components maintained by FasterXML.com
 
       <!-- Modules, basic -->
       <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-afterburner</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-blackbird</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-guice</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-jaxb-annotations</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
       <dependency> <!-- 2.13+: Jakarta-bind too [modules-base#130] -->
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
@@ -373,28 +373,23 @@ of Jackson 3.x components maintained by FasterXML.com
         <version>${jackson.version.module.kotlin}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-mrbean</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
       <dependency> <!-- Added in 2.13.0 -->
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-no-ctor-deser</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-osgi</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-parameter-names</artifactId>
-        <version>${jackson.version.module}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
-        <artifactId>jackson-module-paranamer</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
 

@@ -210,7 +210,7 @@ of Jackson 3.x components maintained by FasterXML.com
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-joda</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>

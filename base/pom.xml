@@ -30,6 +30,9 @@ of Jackson: application code should only rely on `jackson-bom`
          parent pom, and then also allow override as need be
       -->
     <jackson-bom.version>${project.parent.version}</jackson-bom.version>
+
+    <!-- for Reproducible Builds -->
+    <project.build.outputTimestamp>2022-09-18T00:00:00Z</project.build.outputTimestamp>
   </properties>
 
   <dependencies>

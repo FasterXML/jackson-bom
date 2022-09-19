@@ -71,6 +71,9 @@ of Jackson components maintained by FasterXML.com
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
     <!-- JPMS Library Updates-->
     <javax.activation.version>1.2.0</javax.activation.version>
+
+    <!-- for Reproducible Builds -->
+    <project.build.outputTimestamp>2022-09-18T00:00:00Z</project.build.outputTimestamp>
   </properties>
 
   <dependencyManagement>

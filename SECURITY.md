@@ -1,6 +1,6 @@
 # Security Policy
 
-Last Updated: 2020-03-21
+Last Updated: 2022-09-20
 
 ## Reporting a Vulnerability
 
@@ -12,3 +12,13 @@ for general idea). The first step is to file a [Tidelift security contact](https
 Tidelift will route all reports via their system to maintainers of relevant package(s), and start the
 process that will evaluate concern and issue possible fixes, send update notices and so on.
 Note that you do not need to be a Tidelift subscriber to file a security contact.
+
+## Verifying Artifact signatures
+
+(for more in-depth explanation, see [Apache Release Signing](https://infra.apache.org/release-signing#keys-policy) document)
+
+To verify that any given Jackson artifact has been signed with a valid key, have a look at `KEYS` file of the main Jackson repo:
+
+https://github.com/FasterXML/jackson/blob/master/KEYS
+
+which lists all known valid keys in use.

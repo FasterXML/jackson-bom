@@ -14,7 +14,7 @@
   <description>Bill of Materials pom for getting full, complete set of compatible versions
 of Jackson components maintained by FasterXML.com
   </description>
-  <version>2.12.8-SNAPSHOT</version>
+  <version>2.12.7.20221012-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -59,7 +59,7 @@ of Jackson components maintained by FasterXML.com
       -->
     <jackson.version.annotations>${jackson.version}</jackson.version.annotations>
     <jackson.version.core>${jackson.version}</jackson.version.core>
-    <jackson.version.databind>${jackson.version}</jackson.version.databind>
+    <jackson.version.databind>2.12.7.1</jackson.version.databind>
     <jackson.version.dataformat>${jackson.version}</jackson.version.dataformat>
     <jackson.version.datatype>${jackson.version}</jackson.version.datatype>
     <jackson.version.jaxrs>${jackson.version}</jackson.version.jaxrs>

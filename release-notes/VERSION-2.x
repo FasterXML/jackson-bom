@@ -9,6 +9,10 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+(not yet released)
+
+#52: (backported from 2.14) Gradle reports incorrect jackson-bom dependency version
+
 2.13.4 (03-Sep-2022)
 2.13.3 (14-May-2022)
 

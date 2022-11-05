@@ -1,6 +1,6 @@
 Project: jackson-bom / jackson-base
 
-Contains "Bill-of-Materials" for all Jackson components for main component
+Contains "Bill of Materials" for all Jackson components for main component
 ("jackson-bom"), as well as parent pom ("jackson-base") for Jackson components
 themselves. Only former should be extended by anything other than official
 Jackson components (core, modules)
@@ -9,7 +9,7 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.14.0 (not yet released)
+2.14.0 (05-Nov-2022)
 
 #52: Gradle reports incorrect jackson-bom dependency version
 

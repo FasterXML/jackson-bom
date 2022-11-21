@@ -14,7 +14,7 @@
   <description>Bill of Materials pom for getting full, complete set of compatible versions
 of Jackson components maintained by FasterXML.com
   </description>
-  <version>2.14.1-SNAPSHOT</version>
+  <version>2.14.1</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -73,7 +73,7 @@ of Jackson components maintained by FasterXML.com
     <javax.activation.version>1.2.0</javax.activation.version>
 
     <!-- for Reproducible Builds -->
-    <project.build.outputTimestamp>2022-11-21T23:22:26Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2022-11-21T23:24:04Z</project.build.outputTimestamp>
   </properties>
 
   <dependencyManagement>

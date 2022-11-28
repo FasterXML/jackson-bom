@@ -321,6 +321,32 @@ tail?id=66) -->
             </execution>
           </executions>
         </plugin>
+	<!-- 27-Nov-2022, tatu: [bom#56] Configure Felix-bundle and maven-jar plugins to
+           use fixed Timestamp correctly for included class files (needed for Reproducible
+           Builds)
+	  -->
+	<plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>bundle-manifest</id>
+              <phase>process-classes</phase>
+              <goals>
+                <goal>manifest</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <configuration>
+            <archive>
+              <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+            </archive>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
 

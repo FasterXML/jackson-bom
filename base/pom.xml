@@ -242,35 +242,6 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
 	  </executions>
 	</plugin>
 
-	<plugin>
-          <!-- Work around Eclipse incompatibility (http://code.google.com/p/maven-replacer-plugin/issues/de\
-tail?id=66) -->
-          <groupId>org.eclipse.m2e</groupId>
-          <artifactId>lifecycle-mapping</artifactId>
-          <version>1.0.0</version>
-          <configuration>
-            <lifecycleMappingMetadata>
-              <pluginExecutions>
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>com.google.code.maven-replacer-plugin</groupId>
-                    <artifactId>replacer</artifactId>
-                    <versionRange>[${version.plugin.replacer},)</versionRange>
-                    <goals>
-                      <goal>replace</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <execute>
-                      <runOnIncremental>false</runOnIncremental>
-                    </execute>
-                  </action>
-                </pluginExecution>
-              </pluginExecutions>
-            </lifecycleMappingMetadata>
-          </configuration>
-        </plugin>
-
 	<!-- 22-May-2020, tatu: As pr PR #33, we'd like to add Gradle
 	     module metadata to help version alignment
 	    -->

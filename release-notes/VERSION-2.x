@@ -14,6 +14,7 @@ Jackson components (core, modules)
 #56: Change defaults for Felix OSGi Bundle plug-in to fix timestamps
   for Reproducible Builds
  (suggested by Hervé B (@hboutemy))
+- Add version for `jackson-datatype-hibernate6`
 
 2.14.1 (21-Nov-2022)
 

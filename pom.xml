@@ -173,7 +173,7 @@ of Jackson components maintained by FasterXML.com
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate4</artifactId>
         <version>${jackson.version.datatype}</version>
-      </dependency>
+      </dependency> 
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate5</artifactId>
@@ -182,6 +182,11 @@ of Jackson components maintained by FasterXML.com
       <dependency> <!-- Added in 2.13 -->
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate5-jakarta</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency> <!-- Added in 2.15 -->
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-hibernate6</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>

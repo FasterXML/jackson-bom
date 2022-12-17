@@ -184,6 +184,8 @@ of Jackson 3.x components maintained by FasterXML.com
         <artifactId>jackson-datatype-guava</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
+
+      <!-- 17-Dec-2022, tatu: Hibernate modules not converted to 3.0, may not be ported -->
       <!-- 25-Feb-2021, tatu: as per [datatype-hibernate#139], h3 dropped from 2.13 -->
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
@@ -196,11 +198,16 @@ of Jackson 3.x components maintained by FasterXML.com
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-hibernate6</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hppc</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
-      <dependency> <!-- since 2.12.2 -->
+      <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jakarta-jsonp</artifactId>
         <version>${jackson.version.datatype}</version>

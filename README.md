@@ -106,7 +106,7 @@ for full details.
 
 ### Enterprise support
 
-Available as part of the Tidelift Subscription.
+Available as part of the [Tidelift](https://tidelift.com/subscription/pkg/maven-com-fasterxml-jackson-core-jackson-databind) Subscription.
 
 The maintainers of `jackson-bom` and thousands of other packages are working with Tidelift to deliver
 commercial support and maintenance for the open source dependencies you use to build your applications.

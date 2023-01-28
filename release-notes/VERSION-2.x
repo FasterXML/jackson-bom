@@ -16,7 +16,7 @@ Jackson components (core, modules)
  (suggested by Hervé B (@hboutemy))
 - Add version for `jackson-datatype-hibernate6`
 
-2.14.1 (21-Nov-2022)
+2.14.2 (28-Jan-2023)
 
 No changes since 2.14.0
 

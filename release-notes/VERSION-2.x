@@ -9,6 +9,7 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+2.14.2 (28-Jan-2023)
 2.14.1 (21-Nov-2022)
 
 No changes since 2.14.0

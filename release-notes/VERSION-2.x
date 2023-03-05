@@ -15,6 +15,7 @@ Jackson components (core, modules)
   for Reproducible Builds
  (suggested by Hervé B (@hboutemy))
 - Add version for `jackson-datatype-hibernate6`
+- Add version for `jackson-module-jsonSchema-jakarta`
 
 2.14.2 (28-Jan-2023)
 

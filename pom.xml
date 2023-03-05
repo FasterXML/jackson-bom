@@ -364,6 +364,11 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-module-jsonSchema</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+      <dependency> <!-- 2.15+ Jakarta variant as well [jsonSchema#151] -->
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-jsonSchema-jakarta</artifactId>
+        <version>${jackson.version.module}</version>
+      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-kotlin</artifactId>

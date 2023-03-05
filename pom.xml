@@ -367,16 +367,25 @@ of Jackson 3.x components maintained by FasterXML.com
         <artifactId>jackson-module-jaxb-annotations</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
-      <dependency> <!-- 2.13+: Jakarta-bind too [modules-base#130] -->
+      <dependency>
         <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+
+      <!-- 04-Mar-2023, tatu: These two dropped from Jackson 3.0
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-jsonSchema</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-jsonSchema-jakarta</artifactId>
+        <version>${jackson.version.module}</version>
+      </dependency>
+      -->
+
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-kotlin</artifactId>

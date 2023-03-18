@@ -14,7 +14,7 @@
   <description>Bill of Materials pom for getting full, complete set of compatible versions
 of Jackson components maintained by FasterXML.com
   </description>
-  <version>2.15.0-rc1-SNAPSHOT</version>
+  <version>2.15.0-rc1</version>
   <packaging>pom</packaging>
 
   <modules>

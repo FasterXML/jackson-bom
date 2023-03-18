@@ -9,7 +9,7 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.15.0 (not yet released)
+2.15.0-rc1 (18-Mar-2023)
 
 #56: Change defaults for Felix OSGi Bundle plug-in to fix timestamps
   for Reproducible Builds

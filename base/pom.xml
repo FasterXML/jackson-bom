@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>2.15.0</version>
+    <version>2.15.1-SNAPSHOT</version>
   </parent>
   <artifactId>jackson-base</artifactId>
   <name>Jackson Base</name>
@@ -32,7 +32,7 @@ of Jackson: application code should only rely on `jackson-bom`
     <jackson-bom.version>${project.parent.version}</jackson-bom.version>
 
     <!-- for Reproducible Builds -->
-    <project.build.outputTimestamp>2023-04-23T20:21:45Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2023-04-23T20:21:51Z</project.build.outputTimestamp>
   </properties>
 
   <dependencies>

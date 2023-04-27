@@ -179,7 +179,7 @@ of Jackson: application code should only rely on `jackson-bom`
         <plugin>
           <groupId>de.jjohannes</groupId>
           <artifactId>gradle-module-metadata-maven-plugin</artifactId>
-          <version>0.3.0</version>
+          <version>0.4.0</version>
           <executions>
             <execution>
               <goals>

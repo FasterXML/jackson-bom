@@ -9,6 +9,10 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+2.15.1 (not yet released)
+
+#63: Update `de.jjohannes:gradle-module-metadata-maven-plugin` to 0.4.0
+
 2.15.0 (23-Apr-2023)
 
 #56: Change defaults for Felix OSGi Bundle plug-in to fix timestamps

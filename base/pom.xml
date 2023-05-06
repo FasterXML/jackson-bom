@@ -22,6 +22,9 @@ of Jackson: application code should only rely on `jackson-bom`
   </licenses>
 
   <properties>
+    <!-- 06-May-2023, tatu: uUntil upgraded in oss-parent/51 need override here: -->
+    <version.plugin.moditect>1.0.0.Final</version.plugin.moditect>
+
     <moditect.sourceGroup>${project.groupId}</moditect.sourceGroup>
     <moditect.sourceArtifact>${project.artifactId}</moditect.sourceArtifact>
     <moditect.sourceVersion>${project.version}</moditect.sourceVersion>

@@ -9,7 +9,7 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.15.1 (not yet released)
+2.15.1 (16-May-2023)
 
 #63: Update `de.jjohannes:gradle-module-metadata-maven-plugin` to 0.4.0
 - Add override for `version.plugin.moditect` to be `1.0.0.Final` until

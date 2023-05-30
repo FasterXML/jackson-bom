@@ -9,6 +9,10 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+Not yet released
+
+* Udate `nexus-staging-maven-plugin` to 1.6.13 (from 1.6.8)
+
 2.15.2 (30-May-2023)
 
 No changes since 2.15.1

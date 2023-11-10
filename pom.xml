@@ -354,6 +354,11 @@ of Jackson 3.x components maintained by FasterXML.com
       </dependency>
       <dependency>
         <groupId>tools.jackson.module</groupId>
+        <artifactId>jackson-module-android-record</artifactId>
+        <version>${jackson.version.module}</version>
+      </dependency>
+      <dependency>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-blackbird</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
@@ -396,7 +401,7 @@ of Jackson 3.x components maintained by FasterXML.com
         <artifactId>jackson-module-mrbean</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
-      <dependency> <!-- Added in 2.13.0 -->
+      <dependency>
         <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-no-ctor-deser</artifactId>
         <version>${jackson.version.module}</version>

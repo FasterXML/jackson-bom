@@ -9,9 +9,9 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.16.0-rc1 (20-Oct-2023)
+2.16.0 (not yet released)
 
-No changes since 2.15
+* Added `jackson-module-android-record`
 
 2.15.3 (12-Oct-2023)
 

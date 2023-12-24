@@ -23,7 +23,7 @@ There are two ways to use the BOM pom: either as parent pom:
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>2.14.2</version>
+    <version>2.16.0</version>
   </parent>
 ```
 
@@ -37,7 +37,7 @@ or imported in `<dependencyManagement>` section)
     <dependency>
       <groupId>com.fasterxml.jackson</groupId>
       <artifactId>jackson-bom</artifactId>
-      <version>2.14.2</version>
+      <version>2.16.0</version>
       <scope>import</scope>
       <type>pom</type>
     </dependency>   

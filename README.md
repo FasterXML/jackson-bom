@@ -23,7 +23,7 @@ There are two ways to use the BOM pom: either as parent pom:
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>2.14.2</version>
+    <version>2.16.1</version>
   </parent>
 ```
 
@@ -37,7 +37,7 @@ or imported in `<dependencyManagement>` section)
     <dependency>
       <groupId>com.fasterxml.jackson</groupId>
       <artifactId>jackson-bom</artifactId>
-      <version>2.14.2</version>
+      <version>2.16.1</version>
       <scope>import</scope>
       <type>pom</type>
     </dependency>   
@@ -55,7 +55,7 @@ Usually latter is preferable, unless component is very closely coupled with core
 
 Jackson tries to follow [Semantic Versioning](https://en.wikipedia.org/wiki/Software_versioning#Semantic_versioning) (aka "SemVer")
 for its Public API; public methods of types like `ObjectMapper` and `JsonFactory` that calling applications need.
-This means that code written against Jackson 2.0.0 that only uses Public API should still work with no changes with Jackson 2.14.0.
+This means that code written against Jackson 2.0.0 that only uses Public API should still work with no changes with Jackson 2.16.0.
 
 Semantic versioning is, however, NOT guaranteed for types considered internal, and in particular customizations by sub-classing is not covered by same guarantees.
 In case of Internal API (extension points meant for Jackson core components) Jackson will still try to guarantee compatibility with "adjacent" minor versions: that is, code written against Jackson 2.9.0 should still work against Jackson 2.10.x (and in many cases further, but at least with the "next version").
@@ -67,7 +67,7 @@ Having said all that, for most users and most usage Semantic Versioning is maint
 
 ### "Normal" minor version releases
 
-Most of the time all Jackson components are released using 3-digit version, like `2.14.0`.
+Most of the time all Jackson components are released using 3-digit version, like `2.16.0`.
 If so, there will be, for this version:
 
 1. A full set of all core Jackson components under `FasterXML` Github organization

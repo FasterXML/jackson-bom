@@ -369,6 +369,11 @@ of Jackson 3.x components maintained by FasterXML.com
       </dependency>
       <dependency>
         <groupId>tools.jackson.module</groupId>
+        <artifactId>jackson-module-guice7</artifactId>
+        <version>${jackson.version.module}</version>
+      </dependency>
+      <dependency>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-jaxb-annotations</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>

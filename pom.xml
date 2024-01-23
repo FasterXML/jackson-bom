@@ -354,6 +354,11 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-module-guice</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+      <dependency><!-- 2.16+ Guice7 variant -->
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-guice7</artifactId>
+        <version>${jackson.version.module}</version>
+      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-jaxb-annotations</artifactId>

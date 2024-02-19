@@ -11,7 +11,7 @@ Jackson components (core, modules)
 
 2.17.0 (not yet released)
 
--
+- Add managed dependency to JUnit5
 
 2.16.2 (not yet released)
 

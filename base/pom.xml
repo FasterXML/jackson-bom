@@ -37,6 +37,9 @@ of Jackson: application code should only rely on `jackson-bom`
 
   <dependencies>
     <dependency> <!-- all components use junit for testing -->
+      <!-- 19-Feb-2024, tatu: This is for JUnit4 and we'll be migrating
+	  to JUnit5 finally... so this will be dropped at some point
+	-->
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>${version.junit}</version>
@@ -53,13 +56,22 @@ of Jackson: application code should only rely on `jackson-bom`
         <version>${javax.activation.version}</version>
       </dependency>
 
-    <!-- Test dep versions -->
+      <!-- Test dep versions -->
       <dependency>
         <groupId>org.assertj</groupId>
         <artifactId>assertj-core</artifactId>
         <version>${version.assertj}</version>
         <scope>test</scope>
       </dependency>
+      <!-- Starting to migrate to JUnit5 -->
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${version.junit5}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      
     </dependencies>
 
   </dependencyManagement>
@@ -82,8 +94,8 @@ of Jackson: application code should only rely on `jackson-bom`
               <configuration>
               <rules>
                 <requireMavenVersion>
-                  <version>[3.0,)</version>
-                  <message>[ERROR] The currently supported version of Maven is 3.0 or higher</message>
+                  <version>[3.6,)</version>
+                  <message>[ERROR] The currently supported version of Maven is 3.6 or higher</message>
                 </requireMavenVersion>
                 <requirePluginVersions>
                   <banLatest>true</banLatest>

@@ -332,6 +332,11 @@ of Jackson 3.x components maintained by FasterXML.com
       </dependency>
       <dependency>
         <groupId>tools.jackson.jr</groupId>
+        <artifactId>jackson-jr-extension-javatime</artifactId>
+        <version>${jackson.version.jacksonjr}</version>
+      </dependency>
+      <dependency>
+        <groupId>tools.jackson.jr</groupId>
         <artifactId>jackson-jr-objects</artifactId>
         <version>${jackson.version.jacksonjr}</version>
       </dependency>

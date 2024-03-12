@@ -13,12 +13,12 @@ Jackson components (core, modules)
 
 No changes since 2.17
 
-2.17.0 (not yet released)
+2.17.0 (12-Mar-2024)
 
 * Add `jackson-jr-extension-javatime`
 * Add managed dependency to JUnit5
 
-2.16.2 (not yet released)
+2.16.2 (09-Mar-2024)
 
 #66: Added `jackson-module-guice7` (missed from 2.16.0)
  (reported by @hu-chia)

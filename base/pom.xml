@@ -68,15 +68,6 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
     </repository>
   </distributionManagement>
 
-  <dependencies>
-    <dependency> <!-- all components use junit for testing -->
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${version.junit}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
   <dependencyManagement>
     <dependencies>
       <!-- Test dep versions -->
@@ -86,6 +77,14 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
         <version>${version.assertj}</version>
         <scope>test</scope>
       </dependency>
+      <!-- JUnit4 still used for many components (but not core) -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${version.junit}</version>
+        <scope>test</scope>
+      </dependency>
+
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>

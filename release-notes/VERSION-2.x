@@ -11,7 +11,8 @@ Jackson components (core, modules)
 
 2.18.0 (not yet released)
 
-No changes since 2.17
+#68: Remove `junit` 4.x dependency from `jackson-base` 2.18.x to help
+  junit5 migration
 
 2.17.0 (12-Mar-2024)
 

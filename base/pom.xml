@@ -35,18 +35,6 @@ of Jackson: application code should only rely on `jackson-bom`
     <project.build.outputTimestamp>2024-02-27T01:23:07Z</project.build.outputTimestamp>
   </properties>
 
-  <dependencies>
-    <dependency> <!-- all components use junit for testing -->
-      <!-- 19-Feb-2024, tatu: This is for JUnit4 and we'll be migrating
-	  to JUnit5 finally... so this will be dropped at some point
-	-->
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${version.junit}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
   <dependencyManagement>
     <dependencies>
       <!-- JPMS Libraries-->
@@ -63,6 +51,14 @@ of Jackson: application code should only rely on `jackson-bom`
         <version>${version.assertj}</version>
         <scope>test</scope>
       </dependency>
+      <!-- JUnit4 still used for many components (but not core) -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${version.junit}</version>
+        <scope>test</scope>
+      </dependency>
+
       <!-- Starting to migrate to JUnit5 -->
       <dependency>
         <groupId>org.junit</groupId>

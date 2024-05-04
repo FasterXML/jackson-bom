@@ -13,6 +13,8 @@ Jackson components (core, modules)
 
 #68: Remove `junit` 4.x dependency from `jackson-base` 2.18.x to help
   junit5 migration
+- `base/pom.xml` now creates '${project.version.underscore}` for "cleansed"
+  version of `${project.version}`
 
 2.17.0 (12-Mar-2024)
 

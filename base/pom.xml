@@ -309,13 +309,31 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
                 </resources>
               </configuration>
             </execution>
+            <!-- 04-May-2024, tatu: For [core#1264] need "cleansed" version
+              -->
+            <execution>
+              <id>regex-property</id>
+              <!-- default phase is "validate" as per https://www.mojohaus.org/build-helper-maven-plugin/usage.html
+                -->
+              <goals>
+                <goal>regex-property</goal>
+              </goals>
+              <configuration>
+                <name>project.version.underscore</name>
+                <value>${project.version}</value>
+                <regex>\.</regex>
+                <replacement>_</replacement>
+                <failIfNoMatch>true</failIfNoMatch>
+              </configuration>
+            </execution>
           </executions>
         </plugin>
-	<!-- 27-Nov-2022, tatu: [bom#56] Configure Felix-bundle and maven-jar plugins to
+
+        <!-- 27-Nov-2022, tatu: [bom#56] Configure Felix-bundle and maven-jar plugins to
            use fixed Timestamp correctly for included class files (needed for Reproducible
            Builds)
-	  -->
-	<plugin>
+	     -->
+        <plugin>
           <groupId>org.apache.felix</groupId>
           <artifactId>maven-bundle-plugin</artifactId>
           <executions>

@@ -6,7 +6,7 @@
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-parent</artifactId>
     <!-- note: does NOT change for every version of bom -->
-    <version>2.18-SNAPSHOT</version>
+    <version>2.18-rc1-SNAPSHOT</version>
   </parent>
 
   <artifactId>jackson-bom</artifactId>
@@ -14,7 +14,7 @@
   <description>Bill of Materials pom for getting full, complete set of compatible versions
 of Jackson components maintained by FasterXML.com
   </description>
-  <version>2.18.0-SNAPSHOT</version>
+  <version>2.18.0-rc1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>

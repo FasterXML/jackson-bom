@@ -33,8 +33,10 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
          to support earlier versions for some components (annotations, core streaming),
          this is one simplification we can do
     -->
-    <javac.src.version>1.8</javac.src.version>
-    <javac.target.version>1.8</javac.target.version>
+    <!-- 03-Dec-2024, tatu: as per [databind#4820] it's JDK 8 for all except for jackson-annotations
+      -->
+    <javac.src.version>17</javac.src.version>
+    <javac.target.version>17</javac.target.version>
     <javac.debuglevel>lines,source,vars</javac.debuglevel>
 
     <maven.compiler.source>${javac.src.version}</maven.compiler.source>
@@ -235,8 +237,11 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
           <!-- 27-Jan-2022, tatu: as per [databind#3380] etc, really need to use
                "META-INF/versions/9" for tooling compatibility
             -->
+          <!-- 03-Dec-2024, tatu: should soon no longer need moditect but
+	         for now, put under 17
+            -->
           <configuration>
-            <jvmVersion>9</jvmVersion>
+            <jvmVersion>17</jvmVersion>
           </configuration>
         </plugin>
 

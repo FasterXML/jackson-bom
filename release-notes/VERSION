@@ -15,3 +15,4 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 
 - Repacking of (almost all) Jackson packages from Maven group id "com.fasterxml.jackson"
   into "tools.jackson"!
+- Baseline JDK now 17

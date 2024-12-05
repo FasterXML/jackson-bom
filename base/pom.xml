@@ -58,14 +58,14 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
   <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo -->
   <distributionManagement>
     <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
+      <id>sonatype-nexus-snapshots-new</id>
+      <name>Sonatype Nexus Snapshots (new)</name>
       <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
 
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Release Repository</name>
+      <id>sonatype-nexus-staging-new</id>
+      <name>Nexus Release Repository (new)</name>
       <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
@@ -120,8 +120,8 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
                   <version>1.8.0</version>
                 </requireJavaVersion>
                 <requireMavenVersion>
-                  <version>[3.3,)</version>
-                  <message>[ERROR] The currently supported version of Maven is 3.3 or higher</message>
+                  <version>[3.6,)</version>
+                  <message>[ERROR] The currently supported version of Maven is 3.6 or higher</message>
                 </requireMavenVersion>
                 <requirePluginVersions>
                   <banLatest>true</banLatest>
@@ -164,7 +164,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${version.plugin.javadoc}</version>
           <configuration>
-<!-- Disable Java 8 javadoc warnings -->
+<!-- Disable Javadoc warnings -->
             <additionalparam>-Xdoclint:none</additionalparam>
             <failOnError>false</failOnError>
             <links>

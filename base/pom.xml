@@ -303,11 +303,11 @@ of Jackson: application code should only rely on `jackson-bom`
       <!-- 12-Oct-2019, tatu: Copied from
            https://github.com/stephenc/git-timestamp-maven-plugin/blob/master/pom.xml#L327-L337
         -->
-      <!-- 30-May-2023, tatu: Upgrade 1.6.8 -> 1.6.13 -->
+      <!-- 11-Jan-2025, tatu: Upgrade 1.6.13 -> 1.7.0 -->
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.13</version>
+        <version>1.7.0</version>
         <extensions>true</extensions>
         <configuration>
           <serverId>sonatype-nexus-staging</serverId>

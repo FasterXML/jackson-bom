@@ -371,7 +371,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
       <plugin>
          <groupId>org.sonatype.plugins</groupId>
          <artifactId>nexus-staging-maven-plugin</artifactId>
-         <version>1.6.13</version>
+         <version>1.7.0</version>
          <extensions>true</extensions>
          <configuration>
            <serverId>sonatype-nexus-staging</serverId>

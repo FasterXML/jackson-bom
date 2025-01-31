@@ -76,6 +76,17 @@ of Jackson components maintained by FasterXML.com
     <project.build.outputTimestamp>2024-11-01T19:43:09Z</project.build.outputTimestamp>
   </properties>
 
+  <!-- 31-Jan-2025, elect86: I flattened the properties, because Gradle limitations
+        Gradle can resolve this:
+          <jackson.version>2.16.1</jackson.version>
+          <jackson.version.module.kotlin>${jackson.version}</jackson.version.module.kotlin>
+        but not this:
+          <jackson.version>2.16.1</jackson.version>
+          <jackson.version.module>${jackson.version}</jackson.version.module>
+          <jackson.version.module.kotlin>${jackson.version.module}</jackson.version.module.kotlin>
+       somehow related issue: https://github.com/gradle/gradle/issues/15089
+  -->
+
   <dependencyManagement>
     <dependencies>
 

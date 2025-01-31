@@ -101,7 +101,7 @@ release cycle and settings.
 ### Community support
 
 Jackson components are supported by the Jackson community through mailing lists, Gitter forum,
-Github issues. See [Participation, Contributing](../../../jackson#participation-contributing)
+Github issues. See [CONTRIBUTING](https://github.com/FasterXML/jackson/blob/master/CONTRIBUTING.md)
 for full details.
 
 ### Enterprise support

@@ -9,6 +9,13 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+2.18.0 (26-Sep-2024)
+
+#68: Remove `junit` 4.x dependency from `jackson-base` 2.18.x to help
+  junit5 migration
+- `base/pom.xml` now creates '${project.version.underscore}` for "cleansed"
+  version of `${project.version}`
+
 2.17.0 (12-Mar-2024)
 
 * Add `jackson-jr-extension-javatime`

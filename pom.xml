@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- do_not_remove: published-with-gradle-metadata -->
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -452,6 +453,90 @@ of Jackson components maintained by FasterXML.com
 
     </dependencies>
   </dependencyManagement>
+
+  <profiles>
+    <profile>
+      <id>windows</id>
+      <activation>
+        <os>
+          <family>Windows</family>
+        </os>
+      </activation>
+      <properties>
+        <gradle.wrapper>gradle.bat</gradle.wrapper>
+      </properties>
+    </profile>
+    <profile>
+      <id>posix</id>
+      <activation>
+        <os>
+          <family>unix</family>
+        </os>
+      </activation>
+      <properties>
+        <gradle.wrapper>./gradlew</gradle.wrapper>
+      </properties>
+    </profile>
+    <profile>
+      <id>jackson-gradle-catalog-and-platform</id>
+      <activation>
+        <file>
+          <exists>${basedir}/gradle</exists>
+        </file>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>generate-gradle-catalog-and-platform</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <!-- https://www.mojohaus.org/exec-maven-plugin/exec-mojo.html -->
+                  <goal>exec</goal>
+                </goals>
+                <configuration>
+                  <executable>${gradle.wrapper}</executable>
+                  <workingDirectory>${basedir}/gradle</workingDirectory>
+                  <arguments>
+                    <argument>generateCatalogAndPlatform</argument>
+                  </arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>attach-gradle-catalog-and-platform</id>
+                <goals>
+                  <!-- https://www.mojohaus.org/build-helper-maven-plugin/attach-artifact-mojo.html -->
+                  <goal>attach-artifact</goal>
+                </goals>
+                <configuration>
+                  <artifacts>
+                    <artifact>
+                      <file>gradle/build/version-catalog/libs.versions.toml</file>
+                      <type>toml</type>
+                    </artifact>
+                    <artifact>
+                      <file>gradle/build/publications/jackson/module.json</file>
+                      <!-- it should be published with the `.module` extension -->
+                      <type>module</type>
+                    </artifact>
+                  </artifacts>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
   <!-- Alas, need to include snapshot reference since otherwise can not find
        snapshot of parent... -->

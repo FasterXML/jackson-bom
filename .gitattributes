@@ -1,6 +1,5 @@
+# Do not merge `pom.xml` from older version, as it will typically conflict
 #
-# https://help.github.com/articles/dealing-with-line-endings/
-#
-# These are explicitly windows files and should use crlf
-*.bat           text eol=crlf
-
+# note: also need:
+# git config --global merge.ours.driver true
+# (and if ever need to disable change `true` to `false`

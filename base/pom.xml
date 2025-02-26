@@ -247,27 +247,27 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
 
         <!-- 19-Sep-2017, tatu: Or, if Cobertura fails with Java 8....
           -->
-	<plugin>
-	  <groupId>org.jacoco</groupId>
-	  <artifactId>jacoco-maven-plugin</artifactId>
-	  <executions>
+        <plugin>
+	     <groupId>org.jacoco</groupId>
+	     <artifactId>jacoco-maven-plugin</artifactId>
+	     <executions>
             <execution>
               <goals>
                 <goal>prepare-agent</goal>
               </goals>
             </execution>
-	    <execution>
+            <execution>
               <id>report</id>
               <phase>prepare-package</phase>
               <goals>
                 <goal>report</goal>
               </goals>
             </execution>
-	  </executions>
-	</plugin>
+          </executions>
+        </plugin>
 
-	<!-- 22-May-2020, tatu: As pr PR #33, we'd like to add Gradle
-	     module metadata to help version alignment
+        <!-- 22-May-2020, tatu: As pr PR #33, we'd like to add Gradle
+             module metadata to help version alignment
 	    -->
         <plugin>
           <groupId>de.jjohannes</groupId>

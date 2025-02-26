@@ -17,7 +17,7 @@
   <description>Bill of Materials pom for getting full, complete set of compatible versions
 of Jackson 3.x components maintained by FasterXML.com
   </description>
-  <version>3.0.0-SNAPSHOT</version>
+  <version>3.0.0-rc1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -52,12 +52,12 @@ of Jackson 3.x components maintained by FasterXML.com
   </scm>
 
   <properties>
-    <jackson.version>3.0.0-SNAPSHOT</jackson.version>
+    <jackson.version>3.0.0-rc1-SNAPSHOT</jackson.version>
 
     <!-- 08-Aug-2017, tatu: With Jackson 3.x we will drop patch version from
        annotations module, as there are no patch-level changes, ever
       -->
-    <jackson.version.annotations>3.0-SNAPSHOT</jackson.version.annotations>
+    <jackson.version.annotations>3.0-rc1-SNAPSHOT</jackson.version.annotations>
 
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>
@@ -72,7 +72,7 @@ of Jackson 3.x components maintained by FasterXML.com
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
 
     <!-- for Reproducible Builds -->
-    <project.build.outputTimestamp>2022-09-18T00:00:00Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-02-26T23:33:44Z</project.build.outputTimestamp>
   </properties>
 
   <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo.
@@ -226,7 +226,7 @@ of Jackson 3.x components maintained by FasterXML.com
         <artifactId>jackson-datatype-joda</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
-      <dependency> <!-- since 2.11 -->
+      <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-joda-money</artifactId>
         <version>${jackson.version.datatype}</version>
@@ -430,8 +430,6 @@ of Jackson 3.x components maintained by FasterXML.com
       </dependency>
 
       <!-- Language Modules -->
-
-      <!-- 21-Nov-2020, tatu: Scala 2.10 support dropped in Jackson 2.12 -->
 
       <dependency>
         <groupId>tools.jackson.module</groupId>

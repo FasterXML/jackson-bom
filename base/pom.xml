@@ -4,7 +4,7 @@
   <parent>
     <groupId>tools.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.0.0-rc1-SNAPSHOT</version>
   </parent>
   <artifactId>jackson-base</artifactId>
   <name>Jackson Base</name>
@@ -52,7 +52,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
     <jackson-bom.version>${project.parent.version}</jackson-bom.version>
 
     <!-- for Reproducible Builds -->
-    <project.build.outputTimestamp>2022-09-18T00:00:00Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-02-26T23:33:44Z</project.build.outputTimestamp>
   </properties>
 
   <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo -->

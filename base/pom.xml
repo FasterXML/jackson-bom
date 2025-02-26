@@ -265,6 +265,30 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
           </executions>
         </plugin>
 
+        <!-- 26-Jan-2025, tatu: Added via [jackson-bom#85] for 2.19/3.0
+          -->
+        <plugin>
+          <groupId>org.gradlex</groupId>
+          <artifactId>gradle-module-metadata-maven-plugin</artifactId>
+          <version>1.0</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>gmm</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <platformDependencies>
+              <dependency>
+                <groupId>tools.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${jackson-bom.version}</version>
+              </dependency>
+            </platformDependencies>
+          </configuration>
+        </plugin>
+
         <!-- TODO 26-Jan-205, jjohannes: remove the below once it is no longer used by child poms -->
         <!-- 22-May-2020, tatu: As pr PR #33, we'd like to add Gradle
              module metadata to help version alignment

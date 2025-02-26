@@ -112,7 +112,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
               <id>enforce-java</id>
               <phase>validate</phase>
               <goals>
-		<goal>enforce</goal>
+                <goal>enforce</goal>
               </goals>
               <configuration>
               <rules>
@@ -130,9 +130,9 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
                   <phases>clean,deploy,site</phases>
                   <message>[ERROR] Best Practice is to always define plugin versions!</message>
                 </requirePluginVersions>
-	      </rules>
-	      </configuration>
-	    </execution>
+              </rules>
+	         </configuration>
+            </execution>
             <execution>
               <id>enforce-properties</id>
               <phase>validate</phase>
@@ -145,7 +145,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
               </goals>
 -->
               <configuration>
-		<rules>
+                <rules>
                   <!-- Needed both for Replacer plug-in AND for Automatic Module Name -->
                   <requireProperty>
                     <property>packageVersion.package</property>
@@ -153,13 +153,13 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
                   <requireProperty>
                     <property>packageVersion.dir</property>
                   </requireProperty>
-		</rules>
+                </rules>
               </configuration>
             </execution>
           </executions>
-	</plugin>
+        </plugin>
 
-	<plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${version.plugin.javadoc}</version>
@@ -170,12 +170,12 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
               <link>https://docs.oracle.com/en/java/javase/17/docs/api</link>
             </links>
           </configuration>
-	</plugin>
+        </plugin>
 
         <!-- Set up replacer but do not invoke (it's pom, after all);
              however, phase etc are all defined.
           -->
-	<plugin>
+        <plugin>
           <groupId>com.google.code.maven-replacer-plugin</groupId>
           <artifactId>replacer</artifactId>
           <executions>
@@ -209,8 +209,11 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
               </replacement>
             </replacements>
           </configuration>
-	</plugin>
+        </plugin>
 
+        <!-- 26-Feb-2025, tatu: Should no longer be needed in general,
+             but left for possible exceptional cases
+          -->
         <plugin>
           <groupId>org.moditect</groupId>
           <artifactId>moditect-maven-plugin</artifactId>
@@ -257,7 +260,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
             </execution>
             <execution>
               <id>report</id>
-              <phase>prepare-package</phase>
+              <phase>verify</phase>
               <goals>
                 <goal>report</goal>
               </goals>

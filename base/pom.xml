@@ -164,11 +164,10 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${version.plugin.javadoc}</version>
           <configuration>
-<!-- Disable Javadoc warnings -->
-            <additionalparam>-Xdoclint:none</additionalparam>
+            <!-- Disable Javadoc warnings? -->
             <failOnError>false</failOnError>
             <links>
-              <link>https://docs.oracle.com/en/java/javase/11/docs/api</link>
+              <link>https://docs.oracle.com/en/java/javase/17/docs/api</link>
             </links>
           </configuration>
 	</plugin>
@@ -266,6 +265,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
           </executions>
         </plugin>
 
+        <!-- TODO 26-Jan-205, jjohannes: remove the below once it is no longer used by child poms -->
         <!-- 22-May-2020, tatu: As pr PR #33, we'd like to add Gradle
              module metadata to help version alignment
 	    -->

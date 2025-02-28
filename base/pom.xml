@@ -282,6 +282,10 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
             </execution>
           </executions>
           <configuration>
+            <!-- When multiple Jackson modules of different versions are combined through transitive dependencies,
+               the following configuration ensures that the versions are aligned to the highest Jackson version in
+               the dependency graph.
+               For further details, refer to: https://blog.gradle.org/alignment-with-gradle-module-metadata -->
             <platformDependencies>
               <dependency>
                 <groupId>tools.jackson</groupId>
@@ -292,31 +296,6 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
           </configuration>
         </plugin>
 
-        <!-- TODO 26-Jan-205, jjohannes: remove the below once it is no longer used by child poms -->
-        <!-- 22-May-2020, tatu: As pr PR #33, we'd like to add Gradle
-             module metadata to help version alignment
-	    -->
-        <plugin>
-          <groupId>de.jjohannes</groupId>
-          <artifactId>gradle-module-metadata-maven-plugin</artifactId>
-          <version>0.4.0</version>
-          <executions>
-            <execution>
-              <goals>
-                <goal>gmm</goal>
-              </goals>
-            </execution>
-          </executions>
-          <configuration>
-            <platformDependencies>
-              <dependency>
-                <groupId>tools.jackson</groupId>
-                <artifactId>jackson-bom</artifactId>
-                <version>${jackson-bom.version}</version>
-              </dependency>
-            </platformDependencies>
-          </configuration>
-        </plugin>
 
         <!-- 03-Nov-2020, tatu: For 2.12, defaults for better LICENSE inclusion -->
         <plugin>

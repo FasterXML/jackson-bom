@@ -204,29 +204,10 @@ of Jackson: application code should only rely on `jackson-bom`
             </execution>
           </executions>
           <configuration>
-            <platformDependencies>
-              <dependency>
-                <groupId>com.fasterxml.jackson</groupId>
-                <artifactId>jackson-bom</artifactId>
-                <version>${jackson-bom.version}</version>
-              </dependency>
-            </platformDependencies>
-          </configuration>
-        </plugin>
-
-        <!-- TODO jjohannes: remove the below once it is no longer used by child poms -->
-        <plugin>
-          <groupId>de.jjohannes</groupId>
-          <artifactId>gradle-module-metadata-maven-plugin</artifactId>
-          <version>0.4.0</version>
-          <executions>
-            <execution>
-              <goals>
-                <goal>gmm</goal>
-              </goals>
-            </execution>
-          </executions>
-          <configuration>
+            <!-- When multiple Jackson modules of different versions are combined through transitive dependencies,
+                 the following configuration ensures that the versions are aligned to the highest Jackson version in
+                 the dependency graph.
+                 For further details, refer to: https://blog.gradle.org/alignment-with-gradle-module-metadata -->
             <platformDependencies>
               <dependency>
                 <groupId>com.fasterxml.jackson</groupId>

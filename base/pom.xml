@@ -273,7 +273,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
         <plugin>
           <groupId>org.gradlex</groupId>
           <artifactId>gradle-module-metadata-maven-plugin</artifactId>
-          <version>1.0</version>
+          <version>1.0.1</version>
           <executions>
             <execution>
               <goals>

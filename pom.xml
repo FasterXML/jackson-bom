@@ -52,12 +52,12 @@ of Jackson 3.x components maintained by FasterXML.com
   </scm>
 
   <properties>
-    <jackson.version>3.0.0-rc1-SNAPSHOT</jackson.version>
+    <jackson.version>3.0.0-rc1</jackson.version>
 
     <!-- 08-Aug-2017, tatu: With Jackson 3.x we will drop patch version from
        annotations module, as there are no patch-level changes, ever
       -->
-    <jackson.version.annotations>3.0-rc1-SNAPSHOT</jackson.version.annotations>
+    <jackson.version.annotations>3.0-rc1</jackson.version.annotations>
 
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>

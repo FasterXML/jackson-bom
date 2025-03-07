@@ -4,7 +4,7 @@
   <parent>
     <groupId>tools.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>3.0.0-rc2-SNAPSHOT</version>
+    <version>3.0.0-rc1-SNAPSHOT</version>
   </parent>
   <artifactId>jackson-base</artifactId>
   <name>Jackson Base</name>
@@ -382,7 +382,8 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
          <configuration>
            <serverId>sonatype-nexus-staging</serverId>
            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-           <stagingProfileId>b34f19b9cc6224</stagingProfileId>
+	   <!-- 07-Mar-2025, tatu: NOTE! Diff from Jackson 2.x -->
+           <stagingProfileId>1a90e652fbcfb</stagingProfileId>
          </configuration>
        </plugin>
     </plugins>

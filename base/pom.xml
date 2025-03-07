@@ -380,7 +380,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
          <version>1.7.0</version>
          <extensions>true</extensions>
          <configuration>
-           <serverId>sonatype-nexus-staging</serverId>
+           <serverId>sonatype-nexus-staging-new</serverId>
            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
 	   <!-- 07-Mar-2025, tatu: NOTE! Diff from Jackson 2.x -->
            <stagingProfileId>1a90e652fbcfb</stagingProfileId>

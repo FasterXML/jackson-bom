@@ -17,7 +17,7 @@
   <description>Bill of Materials pom for getting full, complete set of compatible versions
 of Jackson 3.x components maintained by FasterXML.com
   </description>
-  <version>3.0.0-rc1</version>
+  <version>3.0.0-rc2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -48,7 +48,7 @@ of Jackson 3.x components maintained by FasterXML.com
     <connection>scm:git:git@github.com:FasterXML/jackson-bom.git</connection>
     <developerConnection>scm:git:git@github.com:FasterXML/jackson-bom.git</developerConnection>
     <url>http://github.com/FasterXML/jackson-bom</url>
-    <tag>jackson-bom-3.0.0-rc1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
@@ -72,7 +72,7 @@ of Jackson 3.x components maintained by FasterXML.com
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
 
     <!-- for Reproducible Builds -->
-    <project.build.outputTimestamp>2025-03-07T22:34:33Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-03-07T22:34:41Z</project.build.outputTimestamp>
   </properties>
 
   <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo.

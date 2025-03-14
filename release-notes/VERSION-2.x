@@ -9,6 +9,10 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+2.19.0 (not yet released)
+
+#85: Add 'org.gradlex:gradle-module-metadata-maven-plugin:1.0'
+
 2.18.0 (26-Sep-2024)
 
 #68: Remove `junit` 4.x dependency from `jackson-base` 2.18.x to help

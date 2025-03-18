@@ -12,6 +12,7 @@ Jackson components (core, modules)
 2.19.0 (not yet released)
 
 #85: Add 'org.gradlex:gradle-module-metadata-maven-plugin:1.0'
+#88: Add `com.fasterxml.woodstox:woodstox-core` as managed (version 7.1.0)
 
 2.18.0 (26-Sep-2024)
 

@@ -235,11 +235,13 @@ of Jackson 3.x components maintained by FasterXML.com
         <artifactId>jackson-datatype-joda-money</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
+      <!-- 19-Mar-2025, tatu: Merged into jackson-databind for Jackson 3.0
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jdk8</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
+      -->
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-json-org</artifactId>
@@ -427,11 +429,14 @@ of Jackson 3.x components maintained by FasterXML.com
         <artifactId>jackson-module-osgi</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+
+      <!-- 19-Mar-2025, tatu: Merged into jackson-databind for Jackson 3.0
       <dependency>
         <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-parameter-names</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+      -->
 
       <!-- Language Modules -->
 

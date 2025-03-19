@@ -179,7 +179,7 @@ of Jackson 3.x components maintained by FasterXML.com
 
       <!-- Data Types -->
       <dependency>
-        <groupId>tool.jackson.datatype</groupId>
+        <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-eclipse-collections</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>

@@ -215,6 +215,11 @@ of Jackson 3.x components maintained by FasterXML.com
       </dependency>
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-javax-money</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency>
+        <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jakarta-jsonp</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
@@ -225,6 +230,13 @@ of Jackson 3.x components maintained by FasterXML.com
           -->
         <version>${jackson.version.datatype}</version>
       </dependency>
+      <!-- 19-Mar-2025, tatu: Merged into jackson-databind for Jackson 3.0
+      <dependency>
+        <groupId>tools.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jdk8</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      -->
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-joda</artifactId>
@@ -235,13 +247,6 @@ of Jackson 3.x components maintained by FasterXML.com
         <artifactId>jackson-datatype-joda-money</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
-      <!-- 19-Mar-2025, tatu: Merged into jackson-databind for Jackson 3.0
-      <dependency>
-        <groupId>tools.jackson.datatype</groupId>
-        <artifactId>jackson-datatype-jdk8</artifactId>
-        <version>${jackson.version.datatype}</version>
-      </dependency>
-      -->
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-json-org</artifactId>
@@ -255,6 +260,11 @@ of Jackson 3.x components maintained by FasterXML.com
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jsr353</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency> <!-- Java Money RI: -->
+        <groupId>tools.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-moneta</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>

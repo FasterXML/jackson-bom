@@ -71,6 +71,10 @@ of Jackson 3.x components maintained by FasterXML.com
     <jackson.version.module.kotlin>${jackson.version.module}</jackson.version.module.kotlin>
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
 
+    <!-- 3rd party dependency versions -->
+    <woodstox.version>7.1.0</woodstox.version>
+    <stax2.version>4.2.2</stax2.version>
+
     <!-- for Reproducible Builds -->
     <project.build.outputTimestamp>2025-03-07T22:45:41Z</project.build.outputTimestamp>
   </properties>
@@ -175,7 +179,7 @@ of Jackson 3.x components maintained by FasterXML.com
 
       <!-- Data Types -->
       <dependency>
-        <groupId>tool.jackson.datatype</groupId>
+        <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-eclipse-collections</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
@@ -211,6 +215,11 @@ of Jackson 3.x components maintained by FasterXML.com
       </dependency>
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-javax-money</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency>
+        <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jakarta-jsonp</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
@@ -221,6 +230,13 @@ of Jackson 3.x components maintained by FasterXML.com
           -->
         <version>${jackson.version.datatype}</version>
       </dependency>
+      <!-- 19-Mar-2025, tatu: Merged into jackson-databind for Jackson 3.0
+      <dependency>
+        <groupId>tools.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jdk8</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      -->
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-joda</artifactId>
@@ -229,11 +245,6 @@ of Jackson 3.x components maintained by FasterXML.com
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-joda-money</artifactId>
-        <version>${jackson.version.datatype}</version>
-      </dependency>
-      <dependency>
-        <groupId>tools.jackson.datatype</groupId>
-        <artifactId>jackson-datatype-jdk8</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>
@@ -249,6 +260,11 @@ of Jackson 3.x components maintained by FasterXML.com
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-jsr353</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency> <!-- Java Money RI: -->
+        <groupId>tools.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-moneta</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>
@@ -423,11 +439,14 @@ of Jackson 3.x components maintained by FasterXML.com
         <artifactId>jackson-module-osgi</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+
+      <!-- 19-Mar-2025, tatu: Merged into jackson-databind for Jackson 3.0
       <dependency>
         <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-parameter-names</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
+      -->
 
       <!-- Language Modules -->
 
@@ -452,6 +471,18 @@ of Jackson 3.x components maintained by FasterXML.com
         <version>${jackson.version.module.scala}</version>
       </dependency>
 
+      <!-- 3rd-party dependencies from primary Jackson components
+        -->
+      <dependency>
+        <groupId>org.codehaus.woodstox</groupId>
+        <artifactId>stax2-api</artifactId>
+        <version>${stax2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.woodstox</groupId>
+        <artifactId>woodstox-core</artifactId>
+	<version>${woodstox.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

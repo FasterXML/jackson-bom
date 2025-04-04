@@ -11,8 +11,9 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-3.0.0-rc (07-Mar-2025)
+3.0.0-rc2 (25-Mar-2025)
 
-- Repacking of (almost all) Jackson packages from Maven group id "com.fasterxml.jackson"
+- Repackaging of (almost all) Jackson packages from Maven group id "com.fasterxml.jackson"
   into "tools.jackson"!
+- Java 8 modules merge into jackson-databind, versions removed
 - Baseline JDK now 17

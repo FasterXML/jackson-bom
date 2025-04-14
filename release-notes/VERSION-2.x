@@ -9,9 +9,12 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.19.0 (not yet released)
+2.19.0-rc2 (07-Apr-2025)
 
 #85: Add 'org.gradlex:gradle-module-metadata-maven-plugin:1.0'
+#88: Add `com.fasterxml.woodstox:woodstox-core` as managed (version 7.1.0)
+#91: Add managed versions for new (2.19) modules: `jackson-datatype-javax-money`
+  and `jackson-datatype-moneta`
 
 2.18.0 (26-Sep-2024)
 

@@ -208,6 +208,25 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
           </configuration>
         </plugin>
 
+        <!-- 28-Apr-2025, tatu: Add SBOM generation support [JSTEP-14]
+          -->
+        <plugin>
+          <groupId>org.cyclonedx</groupId>
+          <artifactId>cyclonedx-maven-plugin</artifactId>
+          <configuration>
+            <classifier>sbom-cyclonedx</classifier>
+            <skipNotDeployed>true</skipNotDeployed>
+          </configuration>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>makeAggregateBom</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
         <!-- 26-Feb-2025, tatu: Should no longer be needed in general,
              but left for possible exceptional cases
           -->

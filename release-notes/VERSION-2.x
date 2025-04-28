@@ -11,7 +11,7 @@ Jackson components (core, modules)
 
 2.20.0 (not yet released)
 
--
+#95: Add default settings for SBOM generation [JSTEP-14]
 
 2.19.0 (24-Apr-2025)
 

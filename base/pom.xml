@@ -85,7 +85,7 @@ of Jackson: application code should only rely on `jackson-bom`
               <id>enforce-java</id>
               <phase>validate</phase>
               <goals>
-		<goal>enforce</goal>
+                <goal>enforce</goal>
               </goals>
               <configuration>
               <rules>
@@ -100,9 +100,9 @@ of Jackson: application code should only rely on `jackson-bom`
                   <phases>clean,deploy,site</phases>
                   <message>[ERROR] Best Practice is to always define plugin versions!</message>
                 </requirePluginVersions>
-	      </rules>
-	      </configuration>
-	    </execution>
+              </rules>
+            </configuration>
+          </execution>
             <execution>
               <id>enforce-properties</id>
               <phase>validate</phase>
@@ -151,8 +151,8 @@ of Jackson: application code should only rely on `jackson-bom`
              ) by default; but do not trigger it (project still needs to add plugin
              in build section)
           -->
-	<plugin>
-          <groupId>com.google.code.maven-replacer-plugin</groupId>
+    <plugin>
+      <groupId>com.google.code.maven-replacer-plugin</groupId>
           <artifactId>replacer</artifactId>
           <executions>
             <execution>
@@ -160,9 +160,27 @@ of Jackson: application code should only rely on `jackson-bom`
               <phase>generate-sources</phase>
             </execution>
           </executions>
-	</plugin>
+    </plugin>
+        <!-- 28-Apr-2025, tatu: Add SBOM generation support [JSTEP-14]
+          -->
+        <plugin>
+          <groupId>org.cyclonedx</groupId>
+          <artifactId>cyclonedx-maven-plugin</artifactId>
+          <configuration>
+            <classifier>sbom-cyclonedx</classifier>
+            <skipNotDeployed>true</skipNotDeployed>
+          </configuration>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>makeAggregateBom</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
 
-	<plugin>
+        <plugin>
           <groupId>org.moditect</groupId>
           <artifactId>moditect-maven-plugin</artifactId>
           <executions>
@@ -170,7 +188,7 @@ of Jackson: application code should only rely on `jackson-bom`
               <id>add-module-infos</id>
               <phase>package</phase>
               <goals>
-		<goal>add-module-info</goal>
+                <goal>add-module-info</goal>
               </goals>
               <configuration>
                 <overwriteExistingFiles>true</overwriteExistingFiles>
@@ -190,7 +208,7 @@ of Jackson: application code should only rely on `jackson-bom`
           <configuration>
             <jvmVersion>9</jvmVersion>
           </configuration>
-	</plugin>
+        </plugin>
 
         <plugin>
           <groupId>org.gradlex</groupId>

@@ -11,7 +11,10 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+3.0.0-rc4 (10-May-2025)
 3.0.0-rc3 (13-Apr-2025)
+3.0.0-rc2 (28-Mar-2025)
+3.0.0-rc1 (07-Mar-2025)
 
 - Repackaging of (almost all) Jackson packages from Maven group id "com.fasterxml.jackson"
   into "tools.jackson"!

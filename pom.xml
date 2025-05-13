@@ -509,6 +509,7 @@ of Jackson 3.x components maintained by FasterXML.com
     </repository>
 
     <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo -->
+    <!--
     <repository>
       <id>sonatype-nexus-snapshots-new</id>
       <name>Sonatype Nexus Snapshots (new)</name>
@@ -516,6 +517,7 @@ of Jackson 3.x components maintained by FasterXML.com
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
+    -->
   </repositories>
 
 </project>

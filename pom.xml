@@ -8,7 +8,7 @@
       -->
     <groupId>com.fasterxml</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>65</version>
+    <version>66</version>
   </parent>
 
   <groupId>tools.jackson</groupId>
@@ -79,22 +79,30 @@ of Jackson 3.x components maintained by FasterXML.com
     <project.build.outputTimestamp>2025-05-10T22:55:37Z</project.build.outputTimestamp>
   </properties>
 
-  <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo.
-       NOTE: unfortunately we DO need this here to publish bom itself.
-       Hopefully that does not leak to downstream projects
-    -->
   <distributionManagement>
+    <!-- 13-May-2025, tatu: Moving to Central Portal-->
+    <repository>
+      <id>central</id>
+      <name>Sonatype Central Portal Repository (releases)</name>
+      <url>https://central.sonatype.com/api/v1/publisher</url>
+    </repository>
+    <snapshotRepository>
+      <id>central-snapshots</id>
+      <name>Sonatype Central Portal Repository (snapshots)</name>
+      <url>https://central.sonatype.com/repository/maven-snapshots</url>
+    </snapshotRepository>
+    <!-- Previous settings
     <snapshotRepository>
       <id>sonatype-nexus-snapshots-new</id>
       <name>Sonatype Nexus Snapshots (new)</name>
       <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
-
     <repository>
       <id>sonatype-nexus-staging-new</id>
       <name>Nexus Release Repository (new)</name>
       <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
+    -->
   </distributionManagement>
 
   <dependencyManagement>
@@ -490,8 +498,17 @@ of Jackson 3.x components maintained by FasterXML.com
 
   <!-- Alas, need to include snapshot reference since otherwise can not find
        snapshot of parent... -->
-  <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo -->
   <repositories>
+    <!-- 13-May-2025, tatu: and now moving to Central Portal -->
+    <repository>
+      <id>central-snapshots</id>
+      <name>Sonatype Central Portal (snapshots)</name>
+      <url>https://central.sonatype.com/repository/maven-snapshots</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+
+    <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo -->
     <repository>
       <id>sonatype-nexus-snapshots-new</id>
       <name>Sonatype Nexus Snapshots (new)</name>

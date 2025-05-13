@@ -52,8 +52,21 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
     <jackson-bom.version>${project.parent.version}</jackson-bom.version>
   </properties>
 
-  <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo -->
   <distributionManagement>
+    <!-- 13-May-2025, tatu: Moving to Central Portal-->
+    <repository>
+      <id>central</id>
+      <name>Sonatype Central Portal Repository (releases)</name>
+      <url>https://central.sonatype.com/api/v1/publisher</url>
+    </repository>
+    <snapshotRepository>
+      <id>central-snapshots</id>
+      <name>Sonatype Central Portal Repository (snapshots)</name>
+      <url>https://central.sonatype.com/repository/maven-snapshots</url>
+    </snapshotRepository>
+
+    <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo -->
+    <!--
     <snapshotRepository>
       <id>sonatype-nexus-snapshots-new</id>
       <name>Sonatype Nexus Snapshots (new)</name>
@@ -65,6 +78,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
       <name>Nexus Release Repository (new)</name>
       <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
+    -->
   </distributionManagement>
 
   <dependencyManagement>

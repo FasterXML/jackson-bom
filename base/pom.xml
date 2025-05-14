@@ -286,7 +286,15 @@ of Jackson: application code should only rely on `jackson-bom`
           </archive>
         </configuration>
       </plugin>
-      
+      <!-- 13-May-2025: config defaults for Sonatype Central Portal publishing -->
+      <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <extensions>true</extensions>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
+          </configuration>
+      </plugin>      
     </plugins>
   </pluginManagement>
 
@@ -304,6 +312,14 @@ of Jackson: application code should only rely on `jackson-bom`
         </executions>
       </plugin>
 
+      <!-- 13-May-2025: Enable Sonatype Central Portal publishing -->
+      <!-- not yet
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+      </plugin>
+
+      -->
       <!-- 12-Oct-2019, tatu: Copied from
            https://github.com/stephenc/git-timestamp-maven-plugin/blob/master/pom.xml#L327-L337
         -->

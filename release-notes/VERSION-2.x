@@ -13,6 +13,12 @@ Jackson components (core, modules)
 
 #95: Add default settings for SBOM generation [JSTEP-14]
 
+2.19.1:
+
+#99: Jackson BOM should not have managed dependency for third-party
+  libraries (woodstox, stax-api)
+ (revert #88)
+
 2.19.0 (24-Apr-2025)
 
 #85: Add 'org.gradlex:gradle-module-metadata-maven-plugin:1.0'

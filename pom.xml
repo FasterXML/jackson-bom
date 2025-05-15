@@ -75,7 +75,7 @@ of Jackson components maintained by FasterXML.com
     <!-- 3rd party dependency versions -->
     <woodstox.version>7.1.0</woodstox.version>
     <stax2.version>4.2.2</stax2.version>
-    
+
     <!-- for Reproducible Builds -->
     <project.build.outputTimestamp>2025-04-24T23:06:21Z</project.build.outputTimestamp>
   </properties>
@@ -453,8 +453,9 @@ of Jackson components maintained by FasterXML.com
         <version>${jackson.version.module.scala}</version>
       </dependency>
 
-      <!-- 3rd-party dependencies from primary Jackson components
-        -->
+      <!-- 3rd-party dependencies from primary Jackson components (2.19.0) -->
+      <!-- 15-May-2025, tatu: Removed from 2.19.1 -->
+      <!--
       <dependency>
         <groupId>org.codehaus.woodstox</groupId>
         <artifactId>stax2-api</artifactId>
@@ -465,6 +466,7 @@ of Jackson components maintained by FasterXML.com
         <artifactId>woodstox-core</artifactId>
 	<version>${woodstox.version}</version>
       </dependency>
+      -->
 
     </dependencies>
   </dependencyManagement>

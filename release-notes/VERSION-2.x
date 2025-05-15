@@ -12,6 +12,8 @@ Jackson components (core, modules)
 2.20.0 (not yet released)
 
 #95: Add default settings for SBOM generation [JSTEP-14]
+#101: Rename properties "woodstox.version"/"stax2.version" as
+  "jackson.version.dep.woodstox"/"jackson.version.dep.stax2-api"
 
 2.19.1:
 

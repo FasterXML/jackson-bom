@@ -317,7 +317,7 @@ of Jackson: application code should only rely on `jackson-bom`
   </pluginManagement>
 
   <!-- And one more odd thing... we actually MUST disable checks just for this
-         pom (but not on something that extends i)
+         pom (but not on something that extends it)
       -->
    <plugins>
       <plugin>
@@ -330,18 +330,17 @@ of Jackson: application code should only rely on `jackson-bom`
         </executions>
       </plugin>
 
-      <!-- 13-May-2025: Enable Sonatype Central Portal publishing -->
-      <!-- not yet
+      <!-- 26-May-2025: Enable Sonatype Central Portal publishing -->
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
       </plugin>
-      -->
 
       <!-- 12-Oct-2019, tatu: Copied from
            https://github.com/stephenc/git-timestamp-maven-plugin/blob/master/pom.xml#L327-L337
         -->
       <!-- 11-Jan-2025, tatu: Upgrade 1.6.13 -> 1.7.0 -->
+      <!-- 26-May-2025, tatu: No longer needed:
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -353,6 +352,7 @@ of Jackson: application code should only rely on `jackson-bom`
           <stagingProfileId>b34f19b9cc6224</stagingProfileId>
         </configuration>
       </plugin>
+      -->
     </plugins>
   </build>
 </project>

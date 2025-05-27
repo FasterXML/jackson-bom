@@ -461,6 +461,7 @@ of Jackson components maintained by FasterXML.com
   <!-- Alas, need to include snapshot reference since otherwise can not find
        snapshot of parent... -->
   <repositories>
+    <!-- 26-May-2025, tatu: No longer needed after move to Central Portal:
     <repository>
       <id>sonatype-nexus-snapshots</id>
       <name>Sonatype Nexus Snapshots</name>
@@ -468,7 +469,8 @@ of Jackson components maintained by FasterXML.com
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
-    <!-- 13-May-2025, tatu: soon moving to Central Portal -->
+    -->
+    <!-- 26-May-2025, tatu: Moved to Sonatype Central Portal -->
     <repository>
       <id>central-snapshots</id>
       <name>Sonatype Central Portal (snapshots)</name>

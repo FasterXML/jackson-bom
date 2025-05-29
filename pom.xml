@@ -73,7 +73,7 @@ of Jackson components maintained by FasterXML.com
     <javax.activation.version>1.2.0</javax.activation.version>
 
     <!-- 3rd party dependency versions -->
-    <woodstox.version>7.1.0</woodstox.version>
+    <woodstox.version>7.1.1</woodstox.version>
     <stax2.version>4.2.2</stax2.version>
 
     <!-- for Reproducible Builds -->

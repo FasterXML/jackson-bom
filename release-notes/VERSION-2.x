@@ -14,6 +14,7 @@ Jackson components (core, modules)
 #99: Jackson BOM should not have managed dependency for third-party
   libraries (woodstox, stax-api)
  (revert #88)
+- Woodstox dep updated to 7.1.1
 
 2.19.0 (24-Apr-2025)
 

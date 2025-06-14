@@ -15,7 +15,7 @@ Jackson components (core, modules)
 #101: Rename properties "woodstox.version"/"stax2.version" as
   "jackson.version.dep.woodstox"/"jackson.version.dep.stax2-api"
 
-2.19.1:
+2.19.1 (13-Jun-2025)
 
 #99: Jackson BOM should not have managed dependency for third-party
   libraries (woodstox, stax-api)

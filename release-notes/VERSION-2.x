@@ -9,7 +9,7 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.19.1:
+2.19.1 (13-Jun-2025)
 
 #99: Jackson BOM should not have managed dependency for third-party
   libraries (woodstox, stax-api)

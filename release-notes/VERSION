@@ -10,6 +10,9 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 ------------------------------------------------------------------------
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
+3.0.0-rc6 (not yet released)
+
+- `jackson-annotations` dependency to `2.x`
 
 3.0.0-rc5 (22-May-2025)
 3.0.0-rc4 (10-May-2025)

@@ -196,6 +196,11 @@ of Jackson components maintained by FasterXML.com
         <artifactId>jackson-datatype-hibernate6</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
+      <dependency> <!-- Added in 2.20 -->
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-hibernate7</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hppc</artifactId>

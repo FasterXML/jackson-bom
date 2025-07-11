@@ -14,6 +14,7 @@ Jackson components (core, modules)
 #95: Add default settings for SBOM generation [JSTEP-14]
 #101: Rename properties "woodstox.version"/"stax2.version" as
   "jackson.version.dep.woodstox"/"jackson.version.dep.stax2-api"
+- `jackson-annotations` will drop patch number (so will be `2.20` NOT `2.20.0`)
 
 2.19.1 (13-Jun-2025)
 

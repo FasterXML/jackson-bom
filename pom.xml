@@ -54,10 +54,11 @@ of Jackson 3.x components maintained by FasterXML.com
   <properties>
     <jackson.version>3.0.0-rc6-SNAPSHOT</jackson.version>
 
-    <!-- 08-Aug-2017, tatu: With Jackson 3.x we will drop patch version from
-       annotations module, as there are no patch-level changes, ever
+    <!-- 10-Jul-2025, tatu: as per [JSTEP-1] Jackson 3.x will NOT contain
+	 separate annotations module, but keep using 2.x one, latest 2.x released
+         at the time 3.x mino version is released.
       -->
-    <jackson.version.annotations>3.0-rc6-SNAPSHOT</jackson.version.annotations>
+    <jackson.version.annotations>2.19.0</jackson.version.annotations>
 
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>
@@ -111,11 +112,9 @@ of Jackson 3.x components maintained by FasterXML.com
       <!-- Core -->
 
       <!-- 13-Jul-2022, tatu: NOTE! There is one notable exception to renaming
-	   of packages between Jackson 2.x and 3.0: annotations will remain
-	   in the "old" `com.fasterxml.jackson.core` group and NOT move to
-	   `tools.jackson.core`. This is due to specific nature of annotations
-	   as API: we want 2.x/3.x to be essentially compatible as if that was
-	   just a Minor version upgrade, not Major.
+           of packages between Jackson 2.x and 3.0: there is no 3.x version
+           of annotations and instead latest 2.x is used instead.
+            Hence "old" group id `com.fasterxml.jackson.core`
 	-->
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
@@ -213,6 +212,11 @@ of Jackson 3.x components maintained by FasterXML.com
       <dependency>
         <groupId>com.fasterxml.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate6</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-hibernate7</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
       -->
@@ -496,17 +500,6 @@ of Jackson 3.x components maintained by FasterXML.com
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
-
-    <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo -->
-    <!--
-    <repository>
-      <id>sonatype-nexus-snapshots-new</id>
-      <name>Sonatype Nexus Snapshots (new)</name>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-      <releases><enabled>false</enabled></releases>
-      <snapshots><enabled>true</enabled></snapshots>
-    </repository>
-    -->
   </repositories>
 
   <build>

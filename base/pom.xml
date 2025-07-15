@@ -195,7 +195,7 @@ of Jackson: application code should only rely on `jackson-bom`
         <plugin>
           <groupId>org.gradlex</groupId>
           <artifactId>gradle-module-metadata-maven-plugin</artifactId>
-          <version>1.0.1</version>
+          <version>1.2</version>
           <executions>
             <execution>
               <goals>

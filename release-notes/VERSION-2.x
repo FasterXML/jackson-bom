@@ -9,6 +9,11 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+2.19.2 (not yet released)
+
+#106: Bump org.gradlex:gradle-module-metadata-maven-plugin to 1.2
+ (contributed by @jjohannes)
+
 2.19.1 (13-Jun-2025)
 
 #99: Jackson BOM should not have managed dependency for third-party

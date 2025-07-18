@@ -9,7 +9,7 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.19.2 (not yet released)
+2.19.2 (18-Jul-2025)
 
 #106: Bump org.gradlex:gradle-module-metadata-maven-plugin to 1.2
  (contributed by @jjohannes)

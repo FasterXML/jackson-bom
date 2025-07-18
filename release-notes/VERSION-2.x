@@ -17,7 +17,7 @@ Jackson components (core, modules)
 - Add version for `jackson-datatype-hibernate7`
 - `jackson-annotations` will drop patch number (so will be `2.20` NOT `2.20.0`)
 
-2.19.2 (not yet released)
+2.19.2 (18-Jul-2025)
 
 #106: Bump org.gradlex:gradle-module-metadata-maven-plugin to 1.2
  (contributed by @jjohannes)

@@ -56,9 +56,9 @@ of Jackson 3.x components maintained by FasterXML.com
 
     <!-- 10-Jul-2025, tatu: as per [JSTEP-1] Jackson 3.x will NOT contain
 	 separate annotations module, but keep using 2.x one, latest 2.x released
-         at the time 3.x mino version is released.
+         at the time 3.x minor version is released.
       -->
-    <jackson.version.annotations>2.19.2-SNAPSHOT</jackson.version.annotations>
+    <jackson.version.annotations>2.19.2</jackson.version.annotations>
 
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>

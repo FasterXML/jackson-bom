@@ -92,18 +92,6 @@ of Jackson 3.x components maintained by FasterXML.com
       <name>Sonatype Central Portal Repository (snapshots)</name>
       <url>https://central.sonatype.com/repository/maven-snapshots</url>
     </snapshotRepository>
-    <!-- Previous settings
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots-new</id>
-      <name>Sonatype Nexus Snapshots (new)</name>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>sonatype-nexus-staging-new</id>
-      <name>Nexus Release Repository (new)</name>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    -->
   </distributionManagement>
 
   <dependencyManagement>

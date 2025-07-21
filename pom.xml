@@ -452,11 +452,13 @@ of Jackson 3.x components maintained by FasterXML.com
 
       <!-- Language Modules -->
 
+      <!-- Scala 2.11 support is dropped for Jackson 3.0
       <dependency>
         <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.11</artifactId>
         <version>${jackson.version.module.scala}</version>
       </dependency>
+      -->
       <dependency>
         <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-scala_2.12</artifactId>

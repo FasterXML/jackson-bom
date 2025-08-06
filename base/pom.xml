@@ -29,12 +29,9 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
     <packageVersion.template.input>${basedir}/src/main/java/${packageVersion.dir}/PackageVersion.java.in</packageVersion.template.input>
     <packageVersion.template.output>${generatedSourcesDir}/${packageVersion.dir}/PackageVersion.java</packageVersion.template.output>
 
-    <!-- 09-Sep-2017, tatu: Jackson 3.x is Java 8 and above only. While it would be possible
-         to support earlier versions for some components (annotations, core streaming),
-         this is one simplification we can do
+    <!-- Jackson 3.x is Java 17 and above only.
+        (but depends on Jackson 2.x annotations which are Java 8)
     -->
-    <!-- 03-Dec-2024, tatu: as per [databind#4820] it's JDK 8 for all except for jackson-annotations
-      -->
     <javac.src.version>17</javac.src.version>
     <javac.target.version>17</javac.target.version>
     <javac.debuglevel>lines,source,vars</javac.debuglevel>
@@ -53,7 +50,6 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
   </properties>
 
   <distributionManagement>
-    <!-- 13-May-2025, tatu: Moving to Central Portal-->
     <repository>
       <id>central</id>
       <name>Sonatype Central Portal Repository (releases)</name>
@@ -64,21 +60,6 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
       <name>Sonatype Central Portal Repository (snapshots)</name>
       <url>https://central.sonatype.com/repository/maven-snapshots</url>
     </snapshotRepository>
-
-    <!-- 13-Jul-2022, tatu: Jackson 3.x now at the "new" Sonatype OSS repo -->
-    <!--
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots-new</id>
-      <name>Sonatype Nexus Snapshots (new)</name>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-
-    <repository>
-      <id>sonatype-nexus-staging-new</id>
-      <name>Nexus Release Repository (new)</name>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    -->
   </distributionManagement>
 
   <dependencyManagement>
@@ -90,7 +71,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
         <version>${version.assertj}</version>
         <scope>test</scope>
       </dependency>
-      <!-- JUnit4 still used for many components (but not core) -->
+      <!-- JUnit4 still used for some components (but not core) -->
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>

@@ -52,7 +52,7 @@ of Jackson 3.x components maintained by FasterXML.com
   </scm>
 
   <properties>
-    <jackson.version>3.0.0-rc8-SNAPSHOT</jackson.version>
+    <jackson.version>3.0.0-rc8</jackson.version>
 
     <!-- 10-Jul-2025, tatu: as per [JSTEP-1] Jackson 3.x will NOT contain
 	 separate annotations module, but keep using 2.x one, latest 2.x released

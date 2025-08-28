@@ -9,7 +9,7 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.20.0 (not yet released)
+2.20.0 (28-Aug-2025)
 
 #95: Add default settings for SBOM generation [JSTEP-14]
 #101: Rename properties "woodstox.version"/"stax2.version" as

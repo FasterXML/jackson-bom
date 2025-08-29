@@ -209,6 +209,7 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
           <groupId>org.cyclonedx</groupId>
           <artifactId>cyclonedx-maven-plugin</artifactId>
           <configuration>
+            <attach>true</attach>
             <classifier>sbom-cyclonedx</classifier>
             <skipNotDeployed>true</skipNotDeployed>
           </configuration>

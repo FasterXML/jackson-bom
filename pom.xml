@@ -58,7 +58,7 @@ of Jackson 3.x components maintained by FasterXML.com
 	 separate annotations module, but keep using 2.x one, latest 2.x released
          at the time 3.x minor version is released.
       -->
-    <jackson.version.annotations>2.20-rc1</jackson.version.annotations>
+    <jackson.version.annotations>2.20</jackson.version.annotations>
 
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>

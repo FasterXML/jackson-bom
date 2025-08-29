@@ -167,6 +167,7 @@ of Jackson: application code should only rely on `jackson-bom`
           <groupId>org.cyclonedx</groupId>
           <artifactId>cyclonedx-maven-plugin</artifactId>
           <configuration>
+            <attach>true</attach>
             <classifier>sbom-cyclonedx</classifier>
             <skipNotDeployed>true</skipNotDeployed>
           </configuration>

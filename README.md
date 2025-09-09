@@ -117,13 +117,20 @@ As the specific example, `jackson-databind` `2.12.6.1` was released on March 26,
 * Version numbers will sort appropriately: `2.12.6.20220326` comes after both `2.12.6` and hypothetical `2.12.6.1`
 * Version number gives an idea of release date, wrt time of hot fix(es) included
 
+### Exception: 'jackson-annotations' has no patch version (2.20+)
+
+One exception to the 3-digit versioning is that starting with [Jackson 2.20](https://github.com/FasterXML/jackson/wiki/Jackson-Release-2.20), [jackson-annotations](https://github.com/FasterXML/jackson-annotations) will use shorter versions consisting of only `major.minor` parts.
+
+So: there will normally only be versions `2.20`, `2.21` and so on; and no patch versions.
+There MAY be critical patches, theoretically, if absolutely required, but no planned ones.
+This change was prompted by the decision to keep Jackson 3.x non-annotations components (mostly [jackson-databind](https://github.com/FasterXML/jackson-databind)) use and support same annotations as 2.x.
+
 ## Secondary: "base" sub-project
 
 Note that this repo ALSO contains `jackson-base` (see under dir `base/`), which is the intended
 parent pom for Jackson core components.
-It extends `jackson-bom`, augmenting with settings that
-are only/mostly relevant for Jackson components, but not to things that depend on Jackson in general.
-Use of `jackson-base` is not recommended for libraries that are not meant to be coupled with Jackson
+It extends `jackson-bom`, augmenting with settings that are only/mostly relevant for Jackson components, but not to things that depend on Jackson in general.
+Use of `jackson-base` is NOT recommended for libraries that are not meant to be coupled with Jackson
 release cycle and settings.
 
 ## Support

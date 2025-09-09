@@ -12,10 +12,11 @@ set of consistent versions to use.
 
 ## Status
 
-[![Build Status](https://travis-ci.org/FasterXML/jackson-bom.svg)](https://travis-ci.org/FasterXML/jackson-bom)
 [![Tidelift](https://tidelift.com/badges/package/maven/com.fasterxml.jackson:jackson-bom)](https://tidelift.com/subscription/pkg/maven-com-fasterxml-jackson-jackson-bom?utm_source=maven-com-fasterxml-jackson-jackson-bom&utm_medium=referral&utm_campaign=readme)
 
 ## Usage
+
+### Usage (Maven)
 
 There are two ways to use the BOM pom: either as parent pom:
 
@@ -48,6 +49,35 @@ or imported in `<dependencyManagement>` section)
 Two approaches are same with respect to dependency inclusion; latter ONLY includes dependencies,
 former includes many other settings.
 Usually latter is preferable, unless component is very closely coupled with core Jackson components.
+
+### Usage (Gradle)
+
+Newer Gradle versions support "platform" concept (see f.ex [Using a plaform](https://docs.gradle.org/current/userguide/platforms.html#sec:using-platform-to-control-transitive-deps)).
+You will need to use "java platform" plugin and then add dependency as follows (in Groovy DSL):
+
+```
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Import the Jackson BOM — pick the version you want
+    implementation platform("com.fasterxml.jackson:jackson-bom:2.20.0")
+
+    // Now declare Jackson modules WITHOUT versions
+    implementation "com.fasterxml.jackson.core:jackson-databind"
+    implementation "com.fasterxml.jackson.core:jackson-annotations"
+    implementation "com.fasterxml.jackson.core:jackson-core"
+
+    // Optional: other Jackson modules
+    implementation "com.fasterxml.jackson.module:jackson-module-parameter-names"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+}
+```
 
 ## Jackson Versioning
 

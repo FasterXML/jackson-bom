@@ -7,12 +7,16 @@ For more on concept of BOMs, see:
 * [Using Maven’s Bill of Materials (BOM)](https://reflectoring.io/maven-bom/)
 
 But the basic idea is that instead of specifying version explicitly for every Jackson
-component, as part of dependency definition, one can use a BOM to get a full, complete
-set of consistent versions to use.
+component, as part of the dependency definition, one can use a BOM to get a full, complete
+set of compatible versions to use by specifying a single version number.
 
 ## Status
 
-[![Tidelift](https://tidelift.com/badges/package/maven/com.fasterxml.jackson:jackson-bom)](https://tidelift.com/subscription/pkg/maven-com-fasterxml-jackson-jackson-bom?utm_source=maven-com-fasterxml-jackson-jackson-bom&utm_medium=referral&utm_campaign=readme)
+| Type | Status |
+| ---- | ------ |
+| Build (CI) | [![Build (github)](https://github.com/FasterXML/jackson-bom/actions/workflows/main.yml/badge.svg)](https://github.com/FasterXML/jackson-bom/actions/workflows/main.yml) |
+| Artifact | [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.fasterxml.jackson/jackson-bom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.fasterxml.jackson/jackson-bom) |
+| OSS Sponsorship | [![Tidelift](https://tidelift.com/badges/package/maven/com.fasterxml.jackson:jackson-bom)](https://tidelift.com/subscription/pkg/maven-com-fasterxml-jackson-jackson-bom?utm_source=maven-com-fasterxml-jackson-jackson-bom&utm_medium=referral&utm_campaign=readme) |
 
 ## Usage
 

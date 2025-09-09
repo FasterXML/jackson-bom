@@ -12,10 +12,11 @@ set of consistent versions to use.
 
 ## Status
 
-[![Build Status](https://travis-ci.org/FasterXML/jackson-bom.svg)](https://travis-ci.org/FasterXML/jackson-bom)
 [![Tidelift](https://tidelift.com/badges/package/maven/com.fasterxml.jackson:jackson-bom)](https://tidelift.com/subscription/pkg/maven-com-fasterxml-jackson-jackson-bom?utm_source=maven-com-fasterxml-jackson-jackson-bom&utm_medium=referral&utm_campaign=readme)
 
 ## Usage
+
+### Usage (Maven)
 
 There are two ways to use the BOM pom: either as parent pom:
 
@@ -48,6 +49,35 @@ or imported in `<dependencyManagement>` section)
 Two approaches are same with respect to dependency inclusion; latter ONLY includes dependencies,
 former includes many other settings.
 Usually latter is preferable, unless component is very closely coupled with core Jackson components.
+
+### Usage (Gradle)
+
+Newer Gradle versions support "platform" concept (see f.ex [Using a plaform](https://docs.gradle.org/current/userguide/platforms.html#sec:using-platform-to-control-transitive-deps)).
+You will need to use "java platform" plugin and then add dependency as follows (in Groovy DSL):
+
+```
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Import the Jackson BOM — pick the version you want
+    implementation platform("com.fasterxml.jackson:jackson-bom:2.20.0")
+
+    // Now declare Jackson modules WITHOUT versions
+    implementation "com.fasterxml.jackson.core:jackson-databind"
+    implementation "com.fasterxml.jackson.core:jackson-annotations"
+    implementation "com.fasterxml.jackson.core:jackson-core"
+
+    // Optional: other Jackson modules
+    implementation "com.fasterxml.jackson.module:jackson-module-parameter-names"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+}
+```
 
 ## Jackson Versioning
 
@@ -87,13 +117,20 @@ As the specific example, `jackson-databind` `2.12.6.1` was released on March 26,
 * Version numbers will sort appropriately: `2.12.6.20220326` comes after both `2.12.6` and hypothetical `2.12.6.1`
 * Version number gives an idea of release date, wrt time of hot fix(es) included
 
+### Exception: 'jackson-annotations' has no patch version (2.20+)
+
+One exception to the 3-digit versioning is that starting with [Jackson 2.20](https://github.com/FasterXML/jackson/wiki/Jackson-Release-2.20), [jackson-annotations](https://github.com/FasterXML/jackson-annotations) will use shorter versions consisting of only `major.minor` parts.
+
+So: there will normally only be versions `2.20`, `2.21` and so on; and no patch versions.
+There MAY be critical patches, theoretically, if absolutely required, but no planned ones.
+This change was prompted by the decision to keep Jackson 3.x non-annotations components (mostly [jackson-databind](https://github.com/FasterXML/jackson-databind)) use and support same annotations as 2.x.
+
 ## Secondary: "base" sub-project
 
 Note that this repo ALSO contains `jackson-base` (see under dir `base/`), which is the intended
 parent pom for Jackson core components.
-It extends `jackson-bom`, augmenting with settings that
-are only/mostly relevant for Jackson components, but not to things that depend on Jackson in general.
-Use of `jackson-base` is not recommended for libraries that are not meant to be coupled with Jackson
+It extends `jackson-bom`, augmenting with settings that are only/mostly relevant for Jackson components, but not to things that depend on Jackson in general.
+Use of `jackson-base` is NOT recommended for libraries that are not meant to be coupled with Jackson
 release cycle and settings.
 
 ## Support

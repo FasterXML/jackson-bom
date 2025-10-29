@@ -31,3 +31,5 @@ echo "Opening emacs to edit release notes..."
 emacs -nw release-notes/VERSION*
 echo "Adding release-notes/VERSION* to git..."
 git add release-notes/VERSION*
+
+git diff --staged

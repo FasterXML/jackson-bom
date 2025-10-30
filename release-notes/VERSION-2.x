@@ -9,7 +9,7 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.20.1 (not yet released)
+2.20.1 (30-Oct-2025)
 
 - Configure `cyclonedx-maven-plugin` with `attach = true` to try to get
   SBOMs published.

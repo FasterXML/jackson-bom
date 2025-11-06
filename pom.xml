@@ -184,30 +184,33 @@ of Jackson 3.x components maintained by FasterXML.com
         <version>${jackson.version.datatype}</version>
       </dependency>
 
-      <!-- 17-Dec-2022, tatu: Hibernate modules not converted to 3.0, may not be ported -->
-      <!-- 25-Feb-2021, tatu: as per [datatype-hibernate#139], h3 dropped from 2.13 -->
-      <!--
+      <!-- 05-Nov-2025, tatu: Hibernate modules now converted to 3.0 -->
       <dependency>
-        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate4</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate5</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <groupId>tools.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-hibernate5-jakarta</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
+      <dependency>
+        <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate6</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hibernate7</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
-      -->
+
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-hppc</artifactId>

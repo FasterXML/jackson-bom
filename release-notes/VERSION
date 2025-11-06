@@ -11,6 +11,10 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+3.0.2 (not yet released)
+
+#114: Add `jackson-datatype-hibernate` 3.x versions
+
 3.0.0 (03-Oct-2025)
 
 Official GA Release!

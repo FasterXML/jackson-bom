@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <!-- 22-Mar-2019, tatu: 3.0 extends `oss-parent` directly, skips (now) obsolete
+    <!-- 22-Mar-2019, tatu: 3.0+ extends `oss-parent` directly, skips (now) obsolete
         `jackson-parent` completely
       -->
     <groupId>com.fasterxml</groupId>

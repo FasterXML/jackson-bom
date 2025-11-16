@@ -203,23 +203,37 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
           </configuration>
         </plugin>
 
-        <!-- 28-Apr-2025, tatu: Add SBOM generation support [JSTEP-14]
-          -->
+        <!-- 28-Apr-2025, tatu: Add SBOM generation support [JSTEP-14] -->
         <plugin>
           <groupId>org.cyclonedx</groupId>
           <artifactId>cyclonedx-maven-plugin</artifactId>
           <configuration>
             <classifier>sbom-cyclonedx</classifier>
-            <skipNotDeployed>true</skipNotDeployed>
+            <!-- 16-Nov-2025, tatu: Should not skip because new Deploy mechanism
+                   `central-publishing-maven-plugin` NOT consider "deploy" apparently
+              -->
+            <skipNotDeployed>false</skipNotDeployed>
           </configuration>
+          <!-- 16-Nov-2025, tatu: Different execution targets for single-module
+              vs multi-module project: "makeBom" vs "makeAggregateBom"
+            -->
+          <!--
           <executions>
             <execution>
+              <id>makeBom</id>
               <phase>package</phase>
-              <goals>
-                <goal>makeAggregateBom</goal>
-              </goals>
+              <goals><goal>makeAggregateBom</goal></goals>
             </execution>
           </executions>
+
+          <executions>
+            <execution>
+              <id>makeBom</id>
+              <phase>package</phase>
+              <goals><goal>makeBom</goal></goals>
+            </execution>
+          </executions>
+          -->
         </plugin>
 
         <!-- 26-Feb-2025, tatu: Should no longer be needed in general,

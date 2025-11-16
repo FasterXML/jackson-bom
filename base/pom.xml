@@ -115,7 +115,7 @@ of Jackson: application code should only rely on `jackson-bom`
               </goals>
 -->
               <configuration>
-		<rules>
+                <rules>
                   <!-- Needed both for Replacer plug-in AND for Automatic Module Name -->
                   <requireProperty>
                     <property>packageVersion.package</property>
@@ -123,7 +123,7 @@ of Jackson: application code should only rely on `jackson-bom`
                   <requireProperty>
                     <property>packageVersion.dir</property>
                   </requireProperty>
-		</rules>
+                </rules>
               </configuration>
             </execution>
           </executions>
@@ -172,12 +172,14 @@ of Jackson: application code should only rely on `jackson-bom`
               -->
             <skipNotDeployed>false</skipNotDeployed>
           </configuration>
+          <!-- 16-Nov-2025, tatu: We will NOT need "makeAggregateBom" for
+              any projects since Jackson multi-module projects have
+              parent poms only, not true aggregation
+            -->
           <executions>
             <execution>
               <phase>package</phase>
-              <goals>
-                <goal>makeAggregateBom</goal>
-              </goals>
+              <goals><goal>makeBom</goal></goals>
             </execution>
           </executions>
         </plugin>

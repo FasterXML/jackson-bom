@@ -13,6 +13,7 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 
 3.1.0 (not yet released)
 
+# xx: Fix cycloneDX SBOM generation settings
 - `oss-parent` dep to 74
 
 3.0.2 (07-Nov-2025)

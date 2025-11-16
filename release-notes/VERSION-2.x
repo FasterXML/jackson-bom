@@ -11,9 +11,9 @@ Jackson components (core, modules)
 
 2.21.0 (not yet released)
 
-- No changes since 2.20
+#115: Fix cycloneDX SBOM generation settings
 
-2.20.1 (not yet released)
+2.20.1 (30-Oct-2025)
 
 - Configure `cyclonedx-maven-plugin` with `attach = true` to try to get
   SBOMs published.

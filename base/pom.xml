@@ -214,26 +214,16 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
               -->
             <skipNotDeployed>false</skipNotDeployed>
           </configuration>
-          <!-- 16-Nov-2025, tatu: Different execution targets for single-module
-              vs multi-module project: "makeBom" vs "makeAggregateBom"
+          <!-- 16-Nov-2025, tatu: We will NOT need "makeAggregateBom" for
+              any projects since Jackson multi-module projects have
+              parent poms only, not true aggregation
             -->
-          <!--
           <executions>
             <execution>
-              <id>makeBom</id>
-              <phase>package</phase>
-              <goals><goal>makeAggregateBom</goal></goals>
-            </execution>
-          </executions>
-
-          <executions>
-            <execution>
-              <id>makeBom</id>
               <phase>package</phase>
               <goals><goal>makeBom</goal></goals>
             </execution>
           </executions>
-          -->
         </plugin>
 
         <!-- 26-Feb-2025, tatu: Should no longer be needed in general,

@@ -14,6 +14,8 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 3.1.0 (not yet released)
 
 #115: Fix cycloneDX SBOM generation settings
+- Add `jackson-module-jsonSchema`, `jackson-module-jsonSchema-jakarta`
+  3.x versions 
 - `jackson-annotations` dependency to 2.21
 - `oss-parent` dep to 74
 

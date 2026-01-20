@@ -411,18 +411,17 @@ of Jackson 3.x components maintained by FasterXML.com
         <version>${jackson.version.module}</version>
       </dependency>
 
-      <!-- 04-Mar-2023, tatu: These two dropped from Jackson 3.0
+      <!-- 20-Jan-2026, tatu: These two are back in Jackson 3.1 (dropped in 3.0) -->
       <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-jsonSchema</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
       <dependency>
-        <groupId>com.fasterxml.jackson.module</groupId>
+        <groupId>tools.jackson.module</groupId>
         <artifactId>jackson-module-jsonSchema-jakarta</artifactId>
         <version>${jackson.version.module}</version>
       </dependency>
-      -->
 
       <dependency>
         <groupId>tools.jackson.module</groupId>

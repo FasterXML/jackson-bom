@@ -7,7 +7,7 @@
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-parent</artifactId>
     <!-- note: does NOT change for every version of bom -->
-    <version>2.19</version>
+    <version>2.19.3</version>
   </parent>
 
   <artifactId>jackson-bom</artifactId>
@@ -15,7 +15,7 @@
   <description>Bill of Materials pom for getting full, complete set of compatible versions
 of Jackson components maintained by FasterXML.com
   </description>
-  <version>2.19.1-SNAPSHOT</version>
+  <version>2.19.5-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -50,7 +50,7 @@ of Jackson components maintained by FasterXML.com
   </scm>
 
   <properties>
-    <jackson.version>2.19.1-SNAPSHOT</jackson.version>
+    <jackson.version>2.19.5-SNAPSHOT</jackson.version>
 
     <!-- 25-Sep-2019, tatu: With Jackson 2.x we will release full patch-level versions
            of annotations BUT they are all identical, content-wise.
@@ -74,11 +74,11 @@ of Jackson components maintained by FasterXML.com
     <javax.activation.version>1.2.0</javax.activation.version>
 
     <!-- 3rd party dependency versions -->
-    <woodstox.version>7.1.0</woodstox.version>
+    <woodstox.version>7.1.1</woodstox.version>
     <stax2.version>4.2.2</stax2.version>
-    
+
     <!-- for Reproducible Builds -->
-    <project.build.outputTimestamp>2025-04-24T23:06:21Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-10-29T23:15:01Z</project.build.outputTimestamp>
   </properties>
 
   <dependencyManagement>
@@ -454,8 +454,9 @@ of Jackson components maintained by FasterXML.com
         <version>${jackson.version.module.scala}</version>
       </dependency>
 
-      <!-- 3rd-party dependencies from primary Jackson components
-        -->
+      <!-- 3rd-party dependencies from primary Jackson components (2.19.0) -->
+      <!-- 15-May-2025, tatu: Removed from 2.19.1 -->
+      <!--
       <dependency>
         <groupId>org.codehaus.woodstox</groupId>
         <artifactId>stax2-api</artifactId>
@@ -466,6 +467,7 @@ of Jackson components maintained by FasterXML.com
         <artifactId>woodstox-core</artifactId>
 	<version>${woodstox.version}</version>
       </dependency>
+      -->
 
     </dependencies>
   </dependencyManagement>
@@ -562,10 +564,20 @@ of Jackson components maintained by FasterXML.com
   <!-- Alas, need to include snapshot reference since otherwise can not find
        snapshot of parent... -->
   <repositories>
+    <!-- 26-May-2025, tatu: No longer needed after move to Central Portal:
     <repository>
       <id>sonatype-nexus-snapshots</id>
       <name>Sonatype Nexus Snapshots</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+    -->
+    <!-- 26-May-2025, tatu: Moved to Sonatype Central Portal -->
+    <repository>
+      <id>central-snapshots</id>
+      <name>Sonatype Central Portal (snapshots)</name>
+      <url>https://central.sonatype.com/repository/maven-snapshots</url>
       <releases><enabled>false</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>

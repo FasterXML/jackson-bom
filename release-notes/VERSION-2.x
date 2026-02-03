@@ -9,6 +9,18 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
+2.19.2 (18-Jul-2025)
+
+#106: Bump org.gradlex:gradle-module-metadata-maven-plugin to 1.2
+ (contributed by @jjohannes)
+
+2.19.1 (13-Jun-2025)
+
+#99: Jackson BOM should not have managed dependency for third-party
+  libraries (woodstox, stax-api)
+ (revert #88)
+- Woodstox dep updated to 7.1.1
+
 2.19.0 (24-Apr-2025)
 
 #85: Add 'org.gradlex:gradle-module-metadata-maven-plugin:1.0'

@@ -11,7 +11,7 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-3.1.1 (not yet released)
+3.1.1 (27-Mar-2026)
 
 #122: Switch Jackson 3.x to JUnit 6.x (from 5.x)
 - `oss-parent` dep to 79

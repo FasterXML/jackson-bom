@@ -89,7 +89,8 @@ NOTE: NOT to be used by components outside of Jackson: application code should o
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
-        <version>${version.junit5}</version>
+        <!-- 27-Mar-2026, tatu: Switch over to JUnit 6 --> 
+        <version>${version.junit6}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

@@ -16,7 +16,7 @@
   <description>Bill of Materials pom for getting full, complete set of compatible versions
 of Jackson 3.x components maintained by FasterXML.com
   </description>
-  <version>3.1.2</version>
+  <version>3.1.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -47,7 +47,7 @@ of Jackson 3.x components maintained by FasterXML.com
     <connection>scm:git:git@github.com:FasterXML/jackson-bom.git</connection>
     <developerConnection>scm:git:git@github.com:FasterXML/jackson-bom.git</developerConnection>
     <url>http://github.com/FasterXML/jackson-bom</url>
-    <tag>jackson-bom-3.1.2</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
@@ -76,7 +76,7 @@ of Jackson 3.x components maintained by FasterXML.com
     <jackson.version.dep.stax2-api>4.2.2</jackson.version.dep.stax2-api>
 
     <!-- for Reproducible Builds -->
-    <project.build.outputTimestamp>2026-04-11T17:16:28Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-04-11T17:16:37Z</project.build.outputTimestamp>
   </properties>
 
   <distributionManagement>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <!-- 22-Mar-2019, tatu: 3.0+ extends `oss-parent` directly, skips (now) obsolete
         `jackson-parent` completely
@@ -52,7 +51,7 @@ of Jackson 3.x components maintained by FasterXML.com
   </scm>
 
   <properties>
-    <jackson.version>3.1.2-SNAPSHOT</jackson.version>
+    <jackson.version>3.1.2</jackson.version>
 
     <!-- 10-Jul-2025, tatu: as per [JSTEP-1] Jackson 3.x will NOT contain
 	 separate annotations module, but keep using 2.x one, latest 2.x released

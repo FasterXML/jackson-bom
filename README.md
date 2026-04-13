@@ -25,10 +25,18 @@ set of compatible versions to use by specifying a single version number.
 There are two ways to use the BOM pom: either as parent pom:
 
 ```xml
+  <!-- for Jackson 3.x -->
+  <parent>
+    <groupId>tools.jackson</groupId>
+    <artifactId>jackson-bom</artifactId>
+    <version>3.1.2</version>
+  </parent>
+
+  <!-- for Jackson 2.x -->
   <parent>
     <groupId>com.fasterxml.jackson</groupId>
     <artifactId>jackson-bom</artifactId>
-    <version>2.20.0</version>
+    <version>2.21.2</version>
   </parent>
 ```
 
@@ -37,12 +45,26 @@ or by importing the BOM to get versions via so-called "managed dependencies"
 or imported in `<dependencyManagement>` section)
 
 ```xml
+<!-- for Jackson 3.x -->
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>tools.jackson</groupId>
+      <artifactId>jackson-bom</artifactId>
+      <version>3.1.2</version>
+      <scope>import</scope>
+      <type>pom</type>
+    </dependency>   
+  </dependencies>
+</dependencyManagement>
+
+<!-- for Jackson 2.x -->
 <dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>com.fasterxml.jackson</groupId>
       <artifactId>jackson-bom</artifactId>
-      <version>2.20.0</version>
+      <version>2.21.2</version>
       <scope>import</scope>
       <type>pom</type>
     </dependency>   
@@ -70,16 +92,19 @@ repositories {
 
 dependencies {
     // Import the Jackson BOM — pick the version you want
-    implementation platform("com.fasterxml.jackson:jackson-bom:2.20.0")
+    implementation platform("tools.jackson:jackson-bom:3.1.2")
 
-    // Now declare Jackson modules WITHOUT versions
-    implementation "com.fasterxml.jackson.core:jackson-databind"
-    implementation "com.fasterxml.jackson.core:jackson-annotations"
-    implementation "com.fasterxml.jackson.core:jackson-core"
+    // OR for Jackson 2.x
+    // implementation platform("com.fasterxml.jackson:jackson-bom:2.21.2")
+
+    // Now declare Jackson modules WITHOUT versions (note package, 2.x vs 3.x)
+    implementation "tools.jackson.core:jackson-databind"
+    implementation "tools.jackson.core:jackson-annotations"
+    implementation "tools.jackson.core:jackson-core"
 
     // Optional: other Jackson modules
-    implementation "com.fasterxml.jackson.module:jackson-module-parameter-names"
-    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+    implementation "tools.jackson.module:jackson-module-parameter-names"
+    implementation "tools.jackson.datatype:jackson-datatype-jsr310"
 }
 ```
 

@@ -15,6 +15,8 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 
 #120: Add defaults for "animal-sniffer" Android SDK compatibility checker plug-in
 - `jackson-annotations` dependency to 2.22
+- `stax2-api` to 4.3.0 (from 4.2.2)
+- `woodstox-core` dependency to 7.2.0 (from 7.1.1)
 
 3.1.1 (27-Mar-2026)
 

@@ -11,7 +11,7 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-3.2.0 (not yet released)
+3.2.0 (08-Jun-2026)
 
 #120: Add defaults for "animal-sniffer" Android SDK compatibility checker plug-in
 - `jackson-annotations` dependency to 2.22

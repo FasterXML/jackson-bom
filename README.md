@@ -15,7 +15,7 @@ set of compatible versions to use by specifying a single version number.
 | Type | Status |
 | ---- | ------ |
 | Build (CI) | [![Build (github)](https://github.com/FasterXML/jackson-bom/actions/workflows/main.yml/badge.svg)](https://github.com/FasterXML/jackson-bom/actions/workflows/main.yml) |
-| Artifact | [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.fasterxml.jackson/jackson-bom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.fasterxml.jackson/jackson-bom) |
+| Artifact | [![Maven Central](https://img.shields.io/maven-central/v/tools.jackson/jackson-bom?style=flat&color=dark-green&label=Maven%20Central)](https://central.sonatype.com/artifact/tools.jackson/jackson-bom) |
 | OSS Sponsorship | [![Tidelift](https://tidelift.com/badges/package/maven/com.fasterxml.jackson:jackson-bom)](https://tidelift.com/subscription/pkg/maven-com-fasterxml-jackson-jackson-bom?utm_source=maven-com-fasterxml-jackson-jackson-bom&utm_medium=referral&utm_campaign=readme) |
 
 ## Usage

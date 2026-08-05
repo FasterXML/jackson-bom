@@ -59,7 +59,7 @@ of Jackson components maintained by FasterXML.com
     <!-- 10-Jul-2025, tatu: Jackson 2.20 finally drops patch from `jackson-annotations`:
         hence we need to separate it out.
       -->
-    <jackson.version.annotations>2.22</jackson.version.annotations>
+    <jackson.version.annotations>2.23-SNAPSHOT</jackson.version.annotations>
 
     <jackson.version.core>${jackson.version}</jackson.version.core>
     <jackson.version.databind>${jackson.version}</jackson.version.databind>

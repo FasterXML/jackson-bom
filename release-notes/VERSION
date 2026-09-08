@@ -14,6 +14,7 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 3.3.0 (not yet released)
 
 - `jackson-annotations` dependency to 2.23
+- `oss-parent` dep to 80
 - `woodstox-core` dependency to 7.2.2 (from 7.2.1)
 
 3.2.0 (08-Jun-2026)

@@ -73,8 +73,8 @@ of Jackson 3.x components maintained by FasterXML.com
     <jackson.version.module.scala>${jackson.version.module}</jackson.version.module.scala>
 
     <!-- 3rd party dependency version properties (not managed!) -->
-    <jackson.version.dep.woodstox>7.2.2</jackson.version.dep.woodstox>
-    <jackson.version.dep.stax2-api>4.3.0</jackson.version.dep.stax2-api>
+    <jackson.version.dep.woodstox>7.3.0</jackson.version.dep.woodstox>
+    <jackson.version.dep.stax2-api>4.3.1</jackson.version.dep.stax2-api>
 
     <!-- for Reproducible Builds -->
     <project.build.outputTimestamp>2026-06-08T22:51:08Z</project.build.outputTimestamp>

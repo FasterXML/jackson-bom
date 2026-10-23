@@ -15,6 +15,7 @@ NOTE: Entries for 2.x found from `release-notes/VERSION-2.x`
 
 #133: `woodstox-core` dependency to 7.3.0 (from 7.2.1),
   `stax2-api` to 4.3.1 (from 4.2.2)
+#137: Add entry for `tools.jackson.datatype:jackson-datatype-fastutil`
 - `jackson-annotations` dependency to 2.23
 - `oss-parent` dep to 80
 

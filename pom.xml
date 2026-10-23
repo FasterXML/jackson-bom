@@ -178,6 +178,12 @@ of Jackson 3.x components maintained by FasterXML.com
         <artifactId>jackson-datatype-eclipse-collections</artifactId>
         <version>${jackson.version.datatype}</version>
       </dependency>
+      <!-- 23-Oct-2026: New in 3.3 -->
+      <dependency>
+        <groupId>tools.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-fastutil</artifactId>
+        <version>${jackson.version.datatype}</version>
+      </dependency>
       <dependency>
         <groupId>tools.jackson.datatype</groupId>
         <artifactId>jackson-datatype-guava</artifactId>

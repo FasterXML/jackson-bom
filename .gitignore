@@ -21,3 +21,9 @@ syntax: glob
 *.ipr
 *.iws
 /.idea/
+
+# Ignore Gradle project-specific cache directory
+gradle/.gradle
+
+# Ignore Gradle build output directory
+gradle/build

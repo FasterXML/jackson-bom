@@ -9,7 +9,7 @@ Jackson components (core, modules)
 === Releases (note: only includes patches with actual changes)
 ------------------------------------------------------------------------
 
-2.23.0 (not yet released)
+2.23.0 (07-Nov-2026)
 
 #133: `woodstox-core` dependency to 7.3.0 (from 7.2.0),
   `stax2-api` to 4.3.1 (from 4.2.2)

@@ -8,7 +8,7 @@
       -->
     <groupId>com.fasterxml</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>80</version>
+    <version>81</version>
   </parent>
 
   <groupId>tools.jackson</groupId>
